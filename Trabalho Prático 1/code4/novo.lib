@@ -1,0 +1,2259 @@
+%--------------------------------------------------------------------------%
+%          prh.bib                                                         %
+%              base de dados bibliografiaca em formato BibTex              %
+%                                                                          %
+%          Versao: prh.bib 1.15 92/04/14
+%--------------------------------------------------------------------------%
+@string{ McG = "McGraw-Hill" }
+@string{ mit = "The MIT Press" }
+@string{ nh = "North-Holland" }
+@string{ aw = "Addison-Wesley" }
+@string{ sv = "Springer-Verlag" }
+@string{ ph = "Prentice Hall" }
+@string{ jws = "John Wiley & Sons" }
+@string{ jw = "John Wiley" }
+@string{ cup = "Cambridge University Press" }
+@string{ dp = "Digital Press" }
+@string{ acm = "ACM" }
+@string{ lncs = "Lecture Notes in Computer Science" }
+@string{ appia = "Associação Portuguesa Para a Inteligência Artificial"}
+@string{ um = "Universidade do Minho" }
+@string{ gdcc = "G.D. Ciências da Computação, D.I./ Univ. Minho" }
+@string{ lund = "Dep. of Computer Science, Lund Institute of Technology" }
+@string{ laas = "LAAS: Laboratoire d'Automatique et d'Analyse des Systemes du CNRS" }
+@string{ gmd = "Gesellschaft fur Mathematik und Datenverarbeitung an der Universitaet Karlsruhe" }
+@string{ eth = "Institut fur Informatik, ETH Zurich" }
+@string{ Jan = "Janeiro" }
+@string{ Feb = "Fevereiro" }
+@string{ Mar = "Março" }
+@string{ Apr = "Abril" }
+@string{ May = "Maio" }
+@string{ Jun = "Junho" }
+@string{ Jul = "Julho" }
+@string{ Aug = "Agosto" }
+@string{ Sep = "Setembro" }
+@string{ Oct = "Outubro" }
+@string{ Nov = "Novembro" }
+@string{ Dec = "Dezembro" }
+
+@techreport{BW83a,
+    author = "Manfred Broy and Martin Wirsing",
+    title = "Generalized Heterogeneous Algebras and Partial Interpretations",
+    year = 1983,
+    month = Feb,
+    institution = "Institut fur Informatik, TUM",
+    note = "(draft version)",
+    annote = "espec algebrica"
+    }
+
+@inbook{Val90a,
+    author = "José M. Valença",
+    title = "Processos, {O}bjectos e {C}omunicação
+                ({O}pção I - {MCC})",
+    chapter = 2,
+    year = 1990,
+    month = Oct,
+    publisher = gdcc,
+    address = um,
+    annote = "programacao oobjectos, proc comunicantes, espec formal"
+    }
+
+@inbook{Val87a,
+    author = "José M. Valença",
+    title = "Algorítmos",
+    chapter = 1,
+    year = 1987,
+    month = Oct,
+    publisher = gdcc,
+    address = um,
+    annote = "algoritmos, espec formal"
+    }
+
+@book{Oli91a,
+    author = "José Nuno Oliveira",
+    title = "Especificação & {S}emântica",
+    year = 1991,
+        month = Oct,
+    edition = "2.st",
+    publisher = "Departamento de Informática, Univ. do Minho",
+    annote = "espec formal, algebrica, denotacional, axiomatica"
+    }
+
+@book{Sto77a,
+    author = "J. E. Stoy",
+    title = "Denotational {S}emantics: the {S}cott-{S}trachey
+                 approach to programming language theory",
+    year = 1977,
+    publisher = "{MIT} Press, Cambridge, Massachusetts",
+    annote = "espec formal, algebrica, denotacional, axiomatica"
+    }
+
+@phdthesis{Mos75a,
+        author = "P. D. Mosses",
+    title = "Mathematical Semantics and Compiler Generation",
+    year = 1975,
+    school = "Oxford University",
+    annote = "compilacao incremental, atributos, ambientes prog"
+    }
+
+@techreport{Sco71a,
+    author = "D. S.  Scott",
+    title = "Outline of a mathematical theory of computation",
+    type = "Technical Monograph",
+    year = 1971,
+    institution = "Programming Research Group, Oxford Univ.",
+    number = "T.M. PRG-2",
+    annote = "compilacao, sintaxe, parsing, modular"
+    }
+
+@article{NF89a,
+    author = "Tim Nicholson and Normann Foo",
+    title = "A Denotational Semantics for {PROLOG}",
+    journal = "ACM Transactions on Programming Languages and Systems",
+    year = 1989,
+    month = Oct,
+    volume = 11,
+    number = 4,
+        pages = "650-665",
+    publisher = acm,
+    annote = "semantica denotacional, prog logica"
+    }
+
+@inproceedings{Hol87a,
+    author = "Niklas Holsti",
+    title = "Incremental Interaction by Syntax Transformation",
+    booktitle = "Compiler Compilers and Incremental Compilation --
+                 Proc. of the Workshop, Bautzen",
+    pages = "192--210",
+    year = 1986, month = Oct,
+    publisher = "Akademie der Wissenschaften der DDR,
+                 Institut {für} Informatik und Rechentechnik",
+        annote = "compilacao incremental, ambientes prog"
+    }
+
+@book{Guy90a,
+    author = "Guy L. Steele",
+    title = "Common {L}isp -- The {L}anguage",
+    edition = "Second edition",
+    year = 1990,
+    publisher = dp,
+    annote = "prog funcional, linguangens"
+    }
+
+@book{citeulike:1033375,
+    abstract = {This book provides the foundation for understanding the theory and pracitce of compilers. Revised and updated, it reflects the current state of compilation. <B> </B>Every chapter has been completely revised to reflect developments in software engineering, programming languages, and computer architecture that have occurred since 1986, when the last edition published.  The authors, recognizing that few readers will ever go on to construct a compiler, retain their focus on the broader set of problems faced in software design and software development. <B></B> Computer scientists, developers, and aspiring students that want to learn how to build, maintain, and execute a compiler for a major programming language.},
+    author = {Aho, Alfred  V.  and Lam, Monica  S.  and Sethi, Ravi   and Ullman, Jeffrey  D. },
+    citeulike-article-id = {1033375},
+    howpublished = {Hardcover},
+    isbn = {0321486811},
+    keywords = {compiler, extensible-syntax, parsing},
+    month = {August},
+    posted-at = {2007-01-10 13:20:52},
+    priority = {2},
+    publisher = {{Addison Wesley}},
+    title = {Compilers: Principles, Techniques, and Tools (2nd Edition)},
+    url = {http://www.amazon.ca/exec/obidos/redirect?tag=citeulike09-20&amp;path=ASIN/0321486811},
+    year = {2006}
+}
+
+@book{ASU86a,
+    author = "A. V. Aho and R. Sethi and J. D. Ullman",
+    title = "Compilers Principles, Techniques and Tools",
+    year = 1986,
+    publisher = aw,
+    annote = "compilacao"
+    }
+
+@book{KR88a,
+        author = "Brian W. Kernighan and Dennis M. Ritchie",
+        title ="The C Programming Language",
+        year = 1988,
+        publisher = ph
+        }
+
+@phdthesis{Bou84a,
+        author = "Pierre Boullier",
+    title = "Contribution à la Construction Automatique
+                        d'Analyseur Lexicographiques et Syntaxiques",
+    year = 1984,
+    school = "Université d'Orleans",
+    annote = "compilacao, parsing, sintaxe, trat erros"
+    }
+
+@phdthesis{Pug88a,
+        author = "William W. Pugh",
+    title = "Incremental Computation and Incremental Evaluation
+                        of Function Programs",
+    year = 1988,
+    school = "Cornell Univ., Dep. of Computer Science",
+    annote = "compilacao incremental, atributos, ambientes prog"
+    }
+
+@article{RMT86a,
+    author = "Thomas Reps and Carla Marceau and Tim Teitelbaum ",
+    title = "Remote Attribute Updating for Language-based Editors",
+    journal = "Communications of the ACM",
+    year = 1986,
+    month = Sep,
+    publisher = acm,
+    annote = "compilacao incremental, atributos,  ambientes prog"
+    }
+
+@techreport{Rep92a,
+        author = "Thomas Reps",
+        title = "Scan Grammars: Parallel Attribute Evaluation
+                 Via Data-Parallelism",
+        year = 1992,
+        month = Nov,
+        type = "Research Report",
+        institution = "University of Wisconsin - Madison",
+        }
+
+@book{RT89b,
+    author = "Thomas Reps and Tim Teitelbaum",
+    title = "The Synthesizer Generator Reference Manual",
+    series = "Texts and Monographs in Computer Science",
+    year = 1989,
+    publisher = sv,
+    annote = "compilacao incremental, atributos,  ambientes prog"
+    }
+
+@book{RT89a,
+    author = "Thomas Reps and Tim Teitelbaum",
+    title = "The Synthesizer Generator: A System for
+                 Constructing Language-Based Editors",
+    series = "Texts and Monographs in Computer Science",
+    year = 1989,
+    publisher = sv,
+    annote = "compilacao incremental, atributos,  ambientes prog"
+    }
+
+
+@article{RTD83a,
+    author = "Thomas Reps and Tim Teitelbaum and A. Demers",
+    title = "Incremental Context-Dependent Analysis for Language-based
+             Editors",
+    journal = "ACM Trans. Programming Languages and Systems (TOPLAS)",
+    pages = "449--477",
+    year = 1983,
+    volume = 5,
+    number = 3,
+    publisher = acm,
+    annote = "compilacao incremental, atributos,  ambientes prog"
+    }
+
+@phdthesis{Rep82a,
+        author = "Thomas Reps",
+    title = "Generating Language-Based Environments",
+    year = 1982,
+    school = "Cornell University",
+    annote = "compilacao incremental, atributos, ambientes prog"
+    }
+
+@article{TR81a,
+    author = "Tim Teitelbaum and Thomas Reps",
+    title = "The Cornell Program Synthesizer: A Syntax-Directed
+             Programming Environment",
+    journal = "Communications of the ACM",
+    year = 1981,
+    month = Sep,
+    volume = 24,
+    number = 9,
+    publisher = acm,
+    annote = "compilacao incremental, atributos,  ambientes prog"
+    }
+
+@phdthesis{Hoo87a,
+        author = "Roger Hoover",
+    title = "Incremental Graph Evaluation",
+    year = 1987,
+    month = May,
+    school = "Cornell University",
+    annote = "compilacao incremental, atributos, ambientes prog"
+    }
+
+@inproceedings{JG82a,
+    author = "Fahimeh Jalili and Jean Gallier",
+    title = "Building Friendly Parsers",
+    booktitle = "9th Annual ACM Symp. on Principles of Programming
+                 Languages",
+    pages = "196--206",
+    year = 1982,
+    publisher = acm,
+    annote = "compilacao, parsing, sintaxe"
+    }
+
+@article{Jal85a,
+    author = "Fahimeh Jalili",
+    title = "A General Incremental Evaluator for Attribute Grammars",
+    journal = "Science of Computer Programming",
+    pages = "83--96",
+    year = 1985,
+    volume = 5,
+    publisher = nh,
+    annote = "atributos, compilacao incremental"
+    }
+
+@book{Rev85a,
+    author = "G. E. Revész",
+    title = "Introduction to Formal Languages",
+    year = 1985,
+    publisher = "McGraw -Hill Book Co.",
+    annote = "linguagem formal, gramaticas"
+    }
+
+@book{Hun87a,
+    author = "Robin Hunter",
+    title = "Compiladores: sua Concepção e
+                Programação em Pascal",
+    year = 1987,
+    series = "Colecção Sistemas",
+    publisher = "Editorial Presença",
+    annote = "compilacao"
+    }
+
+@book{Lee89a ,
+    author = "Peter Lee",
+    title = "Realistic Compiler Generation",
+    year = 1989,
+    publisher = mit,
+    annote = "compilacao, geradores, espec formal, semantica denotacional"
+    }
+
+@book{RM89a,
+    author = "P. Rechenberg and H. {Mössenböck}",
+    title = "A Compiler Generator For Microcomputers",
+    year = 1989,
+    publisher = ph,
+    annote = "compilacao, atributos, geradores"
+    }
+
+@phdthesis{Fed91a,
+    author = "Carine Fedele ",
+    title = "Construction automatisée des compilateurs:
+                 le système {CIGALE}",
+    year = 1991,
+    month = Jan,
+    school = "Université de Nice -- Sophia Antipolis",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@unpublished{FL88a,
+    author = "Carine Fedele and Olivier Lecarme",
+    title = "Towards a Toolkit for Building Language Implementations",
+    year = 1988,
+    note = "Université de Nice- Sophia Antipolis",
+    annote = "compilacao, geradores"
+    }
+
+@unpublished{FL90a,
+    author = "Carine Fedele and Olivier Lecarme",
+    title = "Computer-Aided Building of a Compiler:
+            an Example",
+    year = 1990,
+    note = "Université de Nice- Sophia Antipolis",
+    annote = "compilacao, geradores"
+    }
+
+@article{Nau63a,
+    author = "P. Naur",
+    title = "Revised Report on the Algorithmic language ALGOL 60",
+    journal = "Comunication of the ACM",
+    pages = "1-17",
+    year = 1963,
+    volume = 6,
+    number = 1,
+    publisher = acm,
+    annote = "compilacao, linguagem, gramaticas"
+    }
+
+@inproceedings{KK90a,
+    author = "E. Klein and K. Koskimies",
+    title = "Parallel {O}ne-{P}ass {C}ompilation",
+    booktitle = "WAGA-90",
+    editor = "P. Deransart and M. Jourdan",
+    pages = "76--90",
+    year = 1990,
+    month = Sep,
+    publisher = sv,
+    note = "LNCS 461",
+    annote = "compilacao, parsing, atributos, incremental, concurrencia"
+    }
+
+@techreport{Kos89b,
+    author = "Kai Koskimies",
+    title = "Techniques for Modular Language Implementation",
+    type = "Research Report",
+    year = 1989,
+    institution = "Univ. of Tampere, Depart. of Computer Science",
+    number = "A-1989-5",
+    annote = "compilacao, sintaxe, parsing, modular"
+    }
+
+@techreport{Kos89a,
+    author = "Kai Koskimies",
+    title = "Lazy Recursive Descent Parsing for Modular
+              Language Implementation",
+    type = "Research Report",
+    year = 1989,
+    institution = "Gesellschaft fur Mathematik und Datenverarbeitung mbH",
+    number = "Arbeitspapiere der GMD 376",
+    annote = "compilacao, sintaxe, parsing, modular"
+    }
+
+@phdthesis{Paa91a,
+    author = "Jukka Paakki",
+    title = "Paradigms for {A}ttribute-{G}rammar-based
+                 {L}anguage {I}mplementation",
+    year = 1991,
+    month = Mar,
+    school = "Dep. of Computer Science, University of Helsinki",
+    annote = "compilacao, atributos, geradores, paradigmas prog"
+    }
+
+@techreport{KELP88a,
+    author = "Kai Koskimies and T. Elomaa and T. Lehtonen and J. Paakki",
+    title = "TOOLS/HLP84 Report and User Manual",
+    type = "Research Report",
+    year = 1988,
+    institution = "Univ. of Helsinki, Depart. of Computer Science",
+    number = "A-1988-2",
+    annote = "compilacao, geradores, atributos, oobjectos"
+    }
+
+@techreport{KP87a,
+    author = "Kai Koskimies and Jukka Paakki",
+    title = "TOOLS: An Unifying Approach to Object-Oriented
+              Language Interpretation",
+    type = "Research Report",
+    year = 1987,
+    institution = "Univ. of Helsinki, Depart. of Computer Science",
+    note = "(draft)",
+    annote = "compilacao, geradores, atributos, oobjectos"
+    }
+
+@techreport{KNPS86a,
+    author = "Kai Koskimies and O. Nurmi and J. Paakki and S. Sippu",
+    title = "The Design of the Language Processor Generator HLP84",
+    type = "Techn. Report",
+    year = 1986,
+    institution = "Univ. of Helsinki, Depart. of Computer Science",
+    number = "A-1986-4",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@article{Kos85a,
+    author = "Kai Koskimies",
+    title = "A Note on One-Pass Evaluation of Attribute Grammars",
+    journal = "{BIT}",
+    pages = "439-450",
+    year = 1985,
+    volume = 25,
+    publisher = nh,
+    annote = "compilacao, atributos"
+    }
+
+@article{KR83a,
+    author = "Kai Koskimies and Kari-Jouko {Räihä}",
+    title = "Modelling of Space-efficient One-pass Translation
+             using Attribute Grammars",
+    journal = "Software---Practice and Experience",
+    pages = "119--129",
+    year = 1983,
+    volume = 13,
+    publisher = jws,
+    annote = "compilacao, atributos"
+    }
+
+@unpublished{Vil92a,
+    author = "Jaak Vilo",
+    title = "Attribute {G}rammars and {C}omputational {M}odels as
+                 combined {L}anguage {D}evelopment {T}ools",
+    year = 1992,
+    note = "Dep. of Computer Science, Univ. Helsinki",
+    annote = "compilacao, atributos, gramaticas, linguagens"
+    }
+
+@article{Tyu91a,
+    author = "E. Tyugu",
+    title = "Three {N}ew-{G}eneration {S}oftware {E}nvironments",
+    journal = "Communications of ACM",
+    year = 1991,
+    month = Jun,
+    volume = 34,
+    number = 6,
+    publisher = acm,
+    annote = "representacao, bases conhecimento, ia,  ambientes prog"
+    }
+
+@article{Knu68a,
+    author = "Donald E. Knuth",
+    title = "Semantics of Context-Free Languages",
+    journal = "Mathematical Systems Theory",
+    pages = "127--145",
+    year = 1968,
+    volume = 2,
+    number = 2,
+    publisher = sv,
+    annote = "compilacao, atributos"
+    }
+
+@inproceedings{Tie80a,
+    author = "Martti Tienari",
+    title = "On the Definition of an Attribute Grammar",
+    booktitle = "Semantics-Directed Compiler Generation",
+    editor = "Neil D. Jones",
+    pages = "408--414",
+    year = 1980,
+    month = Jan,
+    publisher = sv,
+    note = "LNCS 94",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{CD87a,
+    author = "B. Courcelle and P. Deransart",
+    title = "Proofs for Partial Correctness for Attribute Grammars
+             with Applications to Recursive Procedures and Logic
+             Programming",
+    year = 1987,
+    month = Jan,
+    institution = "Univ. de Bordeaux I, U.E.R. de Mathématiques et
+                   Informatiques",
+    number = "I-8702",
+    annote = "compilacao, atributos"
+    }
+
+@article{CFZ82a,
+    author = "B. Courcelle and P. Franchi-Zannettacci",
+    title = "Attribute Grammars and Recursive Program Schemes",
+    journal = "Theoretical Computer Science",
+    pages = "163--191 and 235--257",
+    year = 1982,
+    volume = 17,
+    publisher = nh,
+    annote = "compilacao, atributos"
+    }
+
+@techreport{CFZ80a,
+    author = "B. Courcelle and P. Franchi-Zannettacci",
+    title = "Attribute Grammars and Recursive Program Schemes",
+    type = "rapport de recherche",
+    year = 1980,
+    month = Apr,
+    institution = "Univ. de Bordeaux I",
+    number = "8008",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{Der88a,
+    author = "P. Deransart ",
+    title = "On the Multiplicity of Operational Semantics for
+             Logic Programming and their Modelization by
+             Attribute Grammars",
+    type = "Rapport de Recherche",
+    year = 1988,
+    month = Oct,
+    institution = "INRIA, Rocquencourt",
+    number = "916",
+    annote = "compilacao, atributos, prog logica"
+    }
+
+@book{Der87a,
+    author = "P. Deransart ",
+    editor = "David Gries",
+    title = "Cours de Compilation Avancée",
+    year = 1987,
+    series = "Maitrise d'Informatique",
+    publisher = "Univ. de Paris 7",
+    annote = "compilacao"
+    }
+
+@phdthesis{Der84a,
+    author = "Pierre Deransart",
+    title = "Validation des Grammaires d'Attributs",
+    year = 1984,
+    month = Oct,
+    school = "Université de Bordeaux I",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{DF86a,
+    author = "P. Deransart and G. Ferrand",
+    title = "Initiation a Prolog: Concepts de Base",
+    type = "Support de Cours",
+    year = 1986,
+    month = Jun,
+    institution = "Université d'Orleans, Dep. de Mathématiques
+                   et Informatique",
+    number = "86-2",
+    annote = "prog logica"
+    }
+
+@techreport{DM85a,
+    author = "P. Deransart and J. Maluszynski",
+    title = "Relating Logic Programs and Attribute Grammars",
+    year = 1985,
+    type = "Rapport de Recherche",
+    month = Apr,
+    institution = "INRIA, Rocquencourt",
+    number = "393",
+    annote = "compilacao, atributos, prog logica"
+    }
+
+@incollection{DJB88a,
+    author = "P. Deransart and M. Jourdan and B. Lorho",
+    title = "Attribute Grammars: Main Results, Existing Systems
+             and Bibliography",
+    booktitle = "LNCS 341",
+    year = 1988,
+    publisher = sv,
+    annote = "compilacao, atributos"
+    }
+
+@techreport{DJB86a,
+    author = "P. Deransart and M. Jourdan and B. Lorho",
+    title = "A Survey on Attribute Grammars: Part I Main Results",
+    type = "Rapport de Recherche",
+    year = 1986,
+    month = Jan,
+    institution = "INRIA, Rocquencourt",
+    number = "485",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{DJB86b,
+    author = "P. Deransart and M. Jourdan and B. Lorho",
+    title = "A Survey on Attribute Grammars: Part II Review of
+             Existing Systems",
+    year = 1986,
+    type = "Rapport de Recherche",
+    month = Jan,
+    institution = "INRIA, Rocquencourt",
+    number = "510",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{DJB85a,
+    author = "P. Deransart and M. Jourdan and B. Lorho",
+    title = "A Survey on Attribute Grammars: Part III Classified
+             Bibliography",
+    year = 1985,
+    type = "Rapport de Recherche",
+    month = Jan,
+    institution = "INRIA, Rocquencourt",
+    number = "417",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{Jou85a,
+    author = "Martin Jourdan",
+    title = "Evaluation Récursive des Grammaires Attribuées:
+             Deux Implantations",
+    year = 1985,
+    type = "Rapport de Recherche",
+    month = May,
+    institution = "INRIA, Rocquencourt",
+    number = "409",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@techreport{Jou83a,
+    author = "Martin Jourdan",
+    title = "An Efficient Recursive Evaluator for Strongly Non-Circular
+             Attribute Grammars",
+    year = 1983,
+    type = "Rapport de Recherche",
+    month = Oct,
+    institution = "INRIA, Rocquencourt",
+    number = "235",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@inproceedings{Jou91a,
+    author = "Martin Jourdan",
+    title = "A Survey of Parallel Attribute Evaluation Methods",
+    booktitle = "Int. Summer School on Attribute Grammars, Applications
+                     and Systems",
+    editor = "H. Alblas and B. Melichar",
+    pages = "234--255",
+    year = 1991,
+        month = Jun,
+    publisher = sv,
+    note = "LNCS 545",
+    annote = "compilacao, atributos"
+    }
+
+@inproceedings{JBP90a,
+    author = "Martin Jourdan and Carole Le Bellec and Didier Parigot",
+    title = "The {OLGA} {A}ttribute {G}rammar {D}escription {L}anguage:
+                 Design, Implementation and Evaluation",
+    booktitle = "Attribute Grammars and their Applications",
+    editor = "P. Deransart and M. Jourdan",
+    pages = "222--237",
+    year = 1990,
+        month = Sep,
+    publisher = sv,
+    note = "LNCS 461",
+    annote = "compilacao, atributos"
+    }
+
+@unpublished{JP87a,
+    author = "Martin Jourdan and Didier Parigot",
+    title = "More on Speeding Up Circularity Tests for
+            Attribute Grammars",
+    year = 1987,
+    note = "INRIA, Rocquencourt (draft version)",
+    annote = "compilacao, atributos"
+    }
+
+@unpublished{Par87a,
+    author = "Didier Parigot",
+    title = "Practical Transformation of Strongly Non-Circular
+            Attribute Grammars into l-Ordered ones",
+    year = 1987,
+    note = "INRIA, Rocquencourt (draft version)",
+    annote = "compilacao, atributos"
+    }
+
+@article{Arb86a,
+    author = "Bijan Arbab",
+    title = "Compiling Circular Attribute Grammars into Prolog",
+    journal = "Journal of Research and Development",
+    pages = "294--309",
+    year = 1986,
+    month = May,
+    volume = 30,
+    number = 3,
+    publisher = "IBM",
+    annote = "compilacao, atributos, prog logica"
+    }
+
+@techreport{RSea83a,
+    author = "K.J. {Räihä} and M. Saarinen and M. Sarjakoski
+             and S. Sippu and E. Soisalon-Soininen and M. Tienari",
+    title = "Revised Report on the Compiler Writing System HLP78",
+    type = "Techn. Report",
+    year = 1983,
+    institution = "Univ. of Helsinki, Depart. of Computer Science",
+    number = "A-1983-1",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@article{Rai80a,
+    author = "K. J. R{ä}ih{ä}",
+    title = "Bibliography on Attribute Grammars",
+    journal = "{SIGPLAN} Notices",
+    pages = "35--44",
+    year = 1980,
+    volume = 15,
+    number = 3,
+    publisher = "ACM",
+    annote = "compilacao, atributos"
+    }
+
+@book{WG84a,
+    author = "William Waite and Gerhard Goos",
+    title = "Compiler Construction",
+    year = 1984,
+    series = "Texts and Monographs in Computer Science",
+    publisher = sv,
+    annote = "compilacao"
+    }
+
+@techreport{BH91a,
+        author = "Luis S. Barbosa and Pedro R. Henriques",
+        title = "Especificação de Sistemas e
+                 Programação Modular - A Linguagem ML",
+        publisher = {Departamento de Informática},
+        address = {Universidade do Minho},
+    type = "Texto Pedagógico (mestrado em informática)",
+        year = 1991,
+    annote = "especificacao formal, linguagens funcional, modularidade"
+        }
+
+@techreport{Bar92a,
+    author = "Luis Soares Barbosa",
+    title = "Sobre a Especificação Matemática de Sistemas
+                 Concorrentes",
+    year = 1992,
+    month = Jul,
+    type = "Provas de Aptidão Pedadógica e Capacidade Científica",
+    institution = um,
+    number = "",
+    annote = ""
+    }
+
+@techreport{AB91a,
+    author = "J. J. Almeida and L. S. Barbosa",
+    title = "{CAMILA} By Example",
+    year = 1991,
+    type = "Relatorio Interno",
+    month = Nov,
+    institution = gdcc,
+    number = "DI/Inesc-91-11-1",
+    annote = ""
+    }
+
+@techreport{ABCM89a,
+    author = "J. J. Almeida and J. Barros and P. Castro and F. Madeira",
+    title = "Preprocessador para {YARPT}",
+    year = 1989,
+    type = "Relatorio Interno",
+    month = Oct,
+    institution = gdcc,
+    number = "JNICT/PMCT/87.66/JJA1",
+    annote = ""
+    }
+
+@techreport{BH86a,
+    author = "Leonor Barroca and Pedro Rangel Henriques",
+    title = "Especificação e implementação de um compilador
+                 para a linguagem LISS",
+    year = 1986,
+    type = "Relatorio Interno",
+    month = Sep,
+    institution = gdcc,
+    number = "",
+    annote = "compilacao, semantica, espec funcional"
+    }
+
+@phdthesis{Hen92b,
+    author = "Pedro R. Henriques",
+    title = "{A}tributos e {M}odularidade na {E}specificação
+                 de {L}inguagens {F}ormais",
+    year = 1992,
+    month = Dec,
+    school = "Universidade do Minho",
+    annote = "compilacao, atributos, modularidade"
+    }
+
+@techreport{Hen92a,
+    author = "Pedro R. Henriques",
+    title = "Gramáticas de {A}tributos",
+    year = 1992,
+    type = "Texto Pedagógico (mestrado de informática)",
+    month = Jan,
+    institution = gdcc,
+    number = "UMMAN ga-2.1",
+    annote = "compilacao, atributos, geradores, semantica, espec formal"
+    }
+
+@techreport{Hen91c,
+    author = "Pedro R. Henriques",
+    title = "{MASLP}: Alguns Exemplos",
+    year = 1991,
+    type = "Relatorio Interno",
+    month = Dec,
+    institution = gdcc,
+    number = "",
+    annote = "compilacao, atributos, modularidade, semantica, espec formal"
+    }
+
+@techreport{Hen91a,
+    author = "Pedro R. Henriques",
+    title = "Introdução às {MASLP}: um exemplo",
+    year = 1991,
+    type = "Relatorio Interno",
+    month = Dec,
+    institution = gdcc,
+    number = "UMMAN mas-1.5",
+    annote = "compilacao, atributos, modularidade, semantica, espec formal"
+    }
+
+@inproceedings{Hen88a,
+    author = "Pedro R. Henriques",
+    title = "A Semantic Evaluator Generating System in {PROLOG}",
+    booktitle = "Programming Languages Implementation and
+                              Logic Programming",
+    editor = "P. Deransart and B. Lorho and J. Maluszynski",
+    pages = "201--218",
+    year = 1988,
+    month = May,
+    publisher = sv,
+    note = "LNCS 348",
+    annote = "compilacao, atributos, geradores, prog logica"
+    }
+
+@inproceedings{Hen87b,
+    author = "Pedro R. Henriques",
+    title = "Um gerador de Calculadores de Atributos em {PROLOG}",
+    booktitle = "Actas do III Encontro Português de Inteligência
+                 Artificial {EPIA87}",
+    editor = "A. Sernadas and J. M. Neves",
+    pages = "326--350",
+    year = 1987,
+    month = Oct,
+    publisher = appia,
+    annote = "compilacao, atributos, geradores, prog logica"
+    }
+
+@inproceedings{Hen87a,
+    author = "Pedro R. Henriques",
+    title = "Gramáticas de Atributos: o seu papel na
+                         Especificação Formal",
+    booktitle = "Actas do XII Jornadas Luso-Espanholas de
+                                Matemática",
+    editor = "",
+    year = 1987,
+    month = Apr,
+    publisher = um,
+    annote = "compilacao, atributos"
+    }
+
+@techreport{HA90b,
+        author = "Pedro R. Henriques and JosÃ© JoÃ£o Almeida",
+        title = "O {G}erador de {C}ompiladores  {COCO}",
+        year = 1990,
+        month = Mar,
+        type = "Relatório de Instalação",
+        institution = gdcc,
+        }
+
+@techreport{HA90a,
+        author = "Pedro R. Henriques and JosÃ© JoÃ£o Almeida",
+        title = "O {G}erador de {A}nalisadores {Léxicos} {ALEX}",
+        year = 1990,
+        month = Mar,
+        type = "Relatório de Instalação",
+        institution = gdcc,
+        }
+
+@inproceedings{MAH90a,
+        author = "Fernando MÃ¡rio Martins and JosÃ© JoÃ£o AlmeidaJ. and Pedro R. Henriques",
+        title = "Mecanismos para Especificação e Prototipagem
+                         de Interfaces Utilizador-Sistema",
+        booktitle = "Actas do III Encontro Português de
+                             Computação Gráfica",
+        editor = "",
+        year = 1990,
+        month = Oct,
+        publisher = ""
+        }
+
+@manual{PH91a,
+    author = "Luis Filipe Pinto and Pedro Rangel Henriques",
+    title = "Animador de Especificações {OBLOG}",
+    year = 1991,
+    month = Sep,
+    organization = gdcc,
+    edition = "1.st",
+    number = "UMMAN obl-man",
+    annote = "ambientes desenvolvimento, prog oobjectos, espec formal"
+    }
+
+@inproceedings{Kas91a,
+        author = "Uwe Kastens",
+        title = "Attribute Grammar as a Specification Method",
+        booktitle = "Int. Summer School on Attribute Grammars, Applications
+                     and Systems",
+        editor = "H. Alblas and B. Melichar",
+        pages = "16--47",
+        year = 1991,
+        month = Jun,
+        publisher = sv,
+        note = "LNCS 545",
+        annote = "compilacao, atributos"
+        }
+
+@inproceedings{Kas91b,
+        author = "Uwe Kastens",
+        title = "Implementation of Visit-Oriented Attribute Evaluators",
+        booktitle = "Int. Summer School on Attribute Grammars, Applications
+                     and Systems",
+        editor = "H. Alblas and B. Melichar",
+        pages = "114--139",
+        year = 1991,
+        month = Jun,
+        publisher = sv,
+        note = "LNCS 545",
+        annote = "compilacao, atributos"
+        }
+
+@inproceedings{Kas91c,
+        author = "Uwe Kastens",
+        title = "Attribute Grammars in a Compiler Construction Environment",
+        booktitle = "Int. Summer School on Attribute Grammars, Applications
+                     and Systems",
+        editor = "H. Alblas and B. Melichar",
+        pages = "380--400",
+        year = 1991,
+        month = Jun,
+        publisher = sv,
+        note = "LNCS 545",
+        annote = "compilacao, atributos"
+        }
+
+@article{Kas80a,
+    author = "Uwe Kastens",
+    title = "Ordered Attribute Grammars",
+    journal = "Acta Informatica",
+    pages = "229--256",
+    year = 1980,
+    volume = 13,
+    number = 3,
+    publisher = sv,
+    annote = "compilacao, atributos"
+    }
+
+@incollection{KHZ82a,
+    author = "Uwe Kastens and B. Hutt and E. Zimmermann",
+    title = "{GAG}: A Practical Compiler Generator",
+    booktitle = "LNCS 141",
+    year = 1982,
+    publisher = sv,
+    annote = "compilacao, atributos, geradores"
+    }
+
+@misc{Bar82a,
+        author = "K. Barbar",
+    title = "Etude Comparative de Differentes Classes de Grammaires
+             d'Attributs Ordonnées",
+    year = 1982,
+    month = Jun,
+    howpublished = "(Thèse de 3ème cycle)
+                    Université de Bordeaux I",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{YN88a,
+    author = "Y. Yamashita and I. Nakata",
+    title = "Programming in Coupled Context-Free Grammars",
+    type = "Research Report",
+    year = 1988,
+    month = Jun,
+    institution = "Univ. of Tsukuba, Institute of Information Sciences
+                   and Electronics",
+    number = "ISE-TR-88-70",
+    annote = "gramaticas, prog, linguagem formal"
+    }
+
+@techreport{Sas88a,
+    author = "Masataka Sassa",
+    title = "Incremental Attribute Evaluation Based on ECLR-Attributed Grammars",
+    type = "Research Report",
+    number = "A-1988-9",
+    year = 1988,
+    institution = "University of Helsinki, Dep. of Computer Science",
+    annote = "compilacao, atributos, geradores, calculo incremental"
+    }
+
+@article{NS86a,
+    author = "Ikuo Nakata and Masataka Sassa",
+    title = "L-Attributed LL(1)-Grammars are LR-Attributed",
+    journal = "Information Processing Letters",
+    pages = "325-328",
+    year = 1986,
+    month = Dec,
+    volume = 23,
+    publisher = nh,
+    annote = "compilacao, atributos"
+    }
+
+@article{SIN87a,
+    author = "M. Sassa and H. Ishizuka and I. Nakata",
+    title = "{ECLR}-Attributed Grammars: A Practical Class of
+             LR-Attributed Grammars",
+    journal = "Information Processing Letters",
+    pages = "31--41",
+    year = 1987,
+    month = Jul,
+    volume = 24,
+    publisher = nh,
+    annote = "compilacao, atributos"
+    }
+
+@techreport{SIN86a,
+    author = "M. Sassa and H. Ishizuka and I. Nakata",
+    title = "A Compiler Generator Based on LR-Attributed Grammars",
+    type = "Tech. memo",
+    number = "PL-7",
+    year = 1985,
+    month = Nov,
+    institution = "University of Tsukuba, Institute of Information
+                   Sciences and Electronics",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@misc{Fil83a,
+        author = "G. Filè",
+    title = "Theory of Attribute Grammars",
+    year = 1983,
+    howpublished = "(Dissertation) Onderafdeling der Informatica,
+                    Technische Hogeschool Twente",
+    annote = "atributos"
+    }
+
+@inproceedings{EF81a,
+    author = "J. Engelfriet and G. Filè",
+    title = "Passes, Sweeps and Visits",
+    booktitle = "8th {ICALP}, Acre",
+    editor = "S. Even and O. Kariv",
+    pages = "193--207",
+    year = 1981,
+    month = Jul,
+    publisher = sv,
+    note = "LNCS 115",
+    annote = "atributos"
+    }
+
+@inproceedings{Eng84a,
+    author = "J. Engelfriet",
+    title = "Attribute Grammars: Attribute Evaluation Methods",
+    booktitle = "Methods and Tools for Compiler Construction",
+    editor = "B. Lorho",
+    pages = "103--138",
+    year = 1984,
+    publisher = cup,
+    note = "{INRIA--CEC} Course",
+    annote = "atributos"
+    }
+
+@inproceedings{Lor77a,
+    author = "Bernard Lorho",
+    title = "Semantics Attributes Processing in the System {DELTA}",
+    booktitle = "Methods of Algorithmic Language Implementation",
+    editor = "A. Ershov and C.H.A. Koster",
+    pages = "21--40",
+    year = 1977,
+    publisher = sv,
+    note = "LNCS 47",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@phdthesis{Lor74a,
+        author = "Bernard Lorho",
+    title = "De la Définition à la Traduction des Langages de
+             Programmation: Méthode des Attributs Sémantiques",
+    year = 1974,
+    month = Nov,
+    school = "Université Paul Sabatier, Toulouse",
+    annote = "compilacao, atributos"
+    }
+
+@inproceedings{Wil90a,
+    author = "Reinhard Wilhelm",
+    title = "Tree {T}ransformations, {F}unctional {L}anguages and
+                 {A}ttribute {G}rammars",
+    booktitle = "WAGA-90",
+    editor = "P. Deransart and M. Jourdan",
+    pages = "117--129",
+    year = 1990,
+    month = Sep,
+    publisher = sv,
+    note = "LNCS 461",
+    annote = "compilacao, atributos, incremental, funcional"
+    }
+
+@inproceedings{LMW88a,
+    author = "P. Lipps and U. M{ö}ncke and R. Wilhelm",
+    title = "{OPTRAN}: a {L}anguage/{S}ystem for the {S}pecification of
+                {P}rogram {T}ransformations ---System Overview and
+                Experiences",
+    booktitle = "Proceedings of the Workshop on Compiler Compilers
+                    and High Speed Compilation, Berlin",
+    editor = "Hammer",
+    year = 1988,
+    publisher = sv,
+    note = "LNCS 371",
+    annote = "compilacao, atributos, incremental, geradores"
+    }
+
+@techreport{LMOW87a,
+    author = "P. Lipps and U. M{ö}ncke and M. Olk and R. Wilhelm",
+    title = "Attribute Re(evaluation) in {OPTRAN}",
+    type = "{PROSPECTRA} project Report",
+    year = 1987,
+    month = Jan,
+    institution = "Universit{ä}t des Saarlandes",
+    number = "S.1.3-R-5.0",
+    annote = "compilacao incremental, atributos, ambientes, geradores"
+    }
+
+@techreport{Mon87a,
+    author = "U. M{ö}ncke",
+    title = "Grammar Flow Analysis",
+    type = "{PROSPECTRA} project Report",
+    year = 1987,
+    month = Jan,
+    institution = "Universit{ä}t des Saarlandes",
+    number = "S.1.3-R-2.2",
+    annote = "compilacao, atributos, gramaticas, data-flow"
+    }
+
+@inproceedings{MWW84a,
+    author = "U. M{ö}ncke and B. Weisgerber and R. Wilhelm",
+    title = "How to Implement a System for Manipulation of Attributed Trees",
+    booktitle = "{GI} 8. Fachtagung Programmiersprachen und
+                Programmentwicklung, Zurich, {IFB} 777",
+    editor = "U. Ammann",
+    pages = "112--127",
+    year = 1984,
+    month = May,
+    publisher = sv,
+    note = "LNCS 47",
+    annote = "compilacao, atributos"
+    }
+
+@techreport{GPSW86a,
+    author = "M. Greim and {St. Pistorius} and M. Solsbacher
+              and B. Weisberger",
+    title = "{POPSY} and {OPTRAN} Manual",
+    type = "{PROSPECTRA} project Report",
+    year = 1986,
+    institution = "Universit{ä}t des Saarlandes",
+    number = "S.1.6-R-3.0",
+    annote = "compilacao incremental, atributos, ambientes,
+              geradores"
+    }
+
+@inproceedings{Gie86a,
+    author = "Robert Giegerich",
+    title = "Logic Specification of Code Generation Techniques",
+    booktitle = "Programs as Data Objects",
+    editor = "",
+    pages = "96--111",
+    year = 1986,
+    publisher = sv,
+    note = "LNCS",
+    annote = "compilacao, geracao codigo, prog logica, espec formal"
+    }
+
+@unpublished{GG84a,
+    author = "Harald Ganzinger and Robert Giegerich",
+    title = "Attribute Coupled Grammars",
+    year = 1984,
+    note = "(paper to appear at the ACM SIGPLAN Symp. on Compiler
+              Construction, Montreal, 1984)",
+    annote = "compilacao, atributos, gramaticas"
+    }
+
+@article{GGMW82a,
+    author = "H. Ganzinger and R. Giegerich and U. {Möncke}
+                 and R. Wilhelm",
+    title = "A Truly Generative Semantics-Directed Compiler Generator",
+    journal = "ACM",
+    pages = "172--184",
+    year = 1982,
+    publisher = acm,
+    annote = "MUG2, compilacao, atributos, geradores"
+    }
+
+@techreport{BG81a,
+    author = "G. Bartmuss and R. Giegerich",
+    title = "Compiler Development with {MUG2}: An Introductory Example",
+    type = "Techn. Report",
+    year = 1981,
+    month = Apr,
+    institution = "Institut {für} Informatik, T.U. {München}",
+    number = "TUM-I8102",
+    annote = "compilacao, atributos, geradores"
+    }
+
+@article{Far83a,
+    author = "Rodney Farrow ",
+    title = "Attribute Grammars and Data-Flow Languages",
+    journal = "ACM",
+    pages = "28--40",
+    year = 1983,
+    volume = 5,
+    publisher = acm,
+    annote = "compilacao, atributos, linguagens, data-flow"
+    }
+
+    ***
+@techreport{Udd88a,
+    author = "Goran O. Uddeborg",
+    title = "A Functional Parser Generator",
+    type = "Rapport de Recherche",
+    year = 1988,
+    month = Feb,
+    institution = "Chalmers Univ. of Technology at Goterborg",
+    number = "43",
+    annote = "compilacao, parsing, atributos, geradores,
+                prog funcional"
+    }
+
+@unpublished{Cha90a,
+    author = "N. P. Chapman",
+    title = "Defining, Analysing and Implementing Communication
+            Protocols using Attribute Grammars",
+    year = 1990,
+    note = "Univ. College London, Dep. of Computer Science",
+    annote = "atributos, protocolos comunicacao, prototipagem"
+    }
+
+@book{Nij83a,
+    author = "A. Nijholt",
+    title = "Deterministic Top-Down and Bottom-Up Parsing:
+             Historical Notes and Bibliographies",
+    year = 1983,
+    publisher = "Mathematical Center, Amsterdam",
+    annote = "compilacao, parsing, sintaxe"
+    }
+
+@techreport{Chr86a,
+    author = "Henning Christiansen",
+    title = "Parsing and Compilation of Generative Languages",
+    type = "Research Report",
+    year = 1986,
+    institution = "Roskilde Univ. Center, Computer Science",
+    number = "3/1986",
+    annote = "compilacao, parsing, sintaxe, linguagem formal,
+              gramaticas"
+    }
+
+@book{Bac79a,
+    author = "R. Backhouse",
+    title = "Syntax of Programming Languages: Theory and Practice",
+    year = 1979,
+    publisher = ph,
+    annote = "parsing, sintaxe, linguagem formal, gramaticas"
+    }
+
+@inproceedings{Wan84a,
+    author = "M. Wand",
+    title = "A Semantic Prototyping system",
+    booktitle = "Proc. of SIGPLAN84, Symp. on Compiler Construction",
+    editor = "",
+    pages = "213--221",
+    year = 1984,
+    month = Dec,
+    publisher = "SIGPLAN Notices",
+    annote = "compilacao, espec formal, geradores, semantica denotacional"
+    }
+
+@inproceedings{Pau83a,
+    author = "L. Paulson",
+    title = "Compiler generation from Denotational Semantics",
+    booktitle = "Methods and Tools for Compiler Construction",
+    editor = "",
+    pages = "263--288",
+    year = 1983,
+    month = Dec,
+    publisher = "INRIA, Rocquencourt",
+    annote = "compilacao, espec formal, geradores, semantica denotacional"
+    }
+
+@inproceedings{Gau83a,
+    author = "M. C. Gaudel",
+    title = "Compilers Generation from Formal Definitions of
+                           Programming Languages: A Survey",
+    booktitle = "Methods and Tools for Compiler Construction",
+    editor = "",
+    pages = "225--242",
+    year = 1983,
+    month = Dec,
+    publisher = "INRIA, Rocquencourt",
+    annote = "compilacao, espec formal, geradores"
+    }
+
+@inproceedings{GDM84a,
+    author = "M. C. Gaudel and P. Deschamps and M. Mazaud",
+    title = "Compiler Construction from High-Level Specifications",
+    booktitle = "Automatic Program Construction Techniques",
+    editor = "Biermann and Guiho and Kadratoff",
+    year = 1984,
+    publisher = "Macmillan Inc.",
+    annote = "compilacao, espec formal, geradores, semantica algebrica"
+    }
+
+@inproceedings{Des82a,
+    author = "P. Deschamp",
+    title = "{PERLUETTE}: a compiler producing system
+        using abstract data types",
+    booktitle = "Proc. on Int. Symp. on Programming",
+    editor = "",
+    year = 1982,
+    month = Apr,
+    publisher = "Turin",
+    annote = "compilacao, geradores, semantica algebrica"
+    }
+
+@techreport{DMR89a,
+    author = "A. Despland and M. Mazaud and R. Rokotozafy ",
+    title = "Using Rewriting Techniques to Produce Code-Generators
+                and Proving them Correct",
+    type = "Rapport de Recherche",
+    year = 1989,
+    number = "1046",
+    institution = "INRIA, Rocquencourt",
+    annote = "compilacao, geradores, geracao codigo, reescrita"
+    }
+
+@techreport{MRD86a,
+    author = "M. Mazaud and R. Rokotozafy and A. Despland",
+    title = "Méta-Génération de Code par Réécriture de Termes
+        guidée par modèles d'arbres",
+    type = "Rapport de Recherche",
+    year = 1986,
+    number = "582",
+    institution = "INRIA, Rocquencourt",
+    annote = "compilacao, geradores, geracao codigo, reescrita,
+             semantica algebrica"
+    }
+
+@techreport{Bon86a,
+    author = "Joel Bonnet",
+    title = "Etude des principaux langages de description de grammaires
+                 attribuees et specification d'un nouveau langages base sur
+                 des grammaires abstraites",
+    type = "Rapport de D.E.A.",
+    year = 1986,
+    institution = "INRIA, Rocquencourt",
+    annote = "compilacao, atributos, linguagem especificacao"
+    }
+
+@techreport{Bil86a,
+    author = "Sylvie Billot",
+    title = "Analyse Syntaxique non Deterministe",
+    type = "Rapport de D.E.A.",
+    year = 1986,
+    institution = "INRIA, Rocquencourt",
+    annote = "sintaxe, parsing, linguagem formal"
+    }
+
+
+@techreport{Den80a,
+    author = "P. Dencker",
+    title = "Benutzerbeschreibung des {PGS}",
+    type = "Interner Bericht",
+    year = 1980,
+    number = "8/80",
+    institution = "{Institüt für} Informatik, Univ. Karlsruhe",
+    annote = "compilacao, geradores, parsing"
+    }
+
+@techreport{Jac87a,
+    author = "C. J. H. Jacobs",
+    title = "{LLgen}, an extended {LL(1)} Parser Generator",
+    type = "Tech. Report",
+    year = 1987,
+    institution = "Univ. of Amsterdam, Dep. Mathematics
+                                 and Comp. Science",
+    annote = "compilacao, geradores, parsing"
+    }
+
+@unpublished{TGHK90a,
+    author = "J. Tolzki and T. Gyimóthi and T. Horvcith
+                and F. Kocsiz",
+    title = "Generating Modular Compilers in {PROF-LP}",
+    year = 1990,
+    note = "Univ. of Szeged, Hungary",
+    annote = "compilacao, geradores, espec modular"
+    }
+
+@unpublished{Mar87a,
+    author = "I. Margitics",
+    title = "{PROF-LP} Professional Language Processor",
+    year = 1987,
+    note = "Sci-L Systems, Budapest",
+    annote = "compilacao, geradores, parsing, atributos"
+    }
+
+@article{PW80a,
+    author = "F. C. N. Pereira and D. H. D. Warren",
+    title = "Definite Clause Grammars for Language Analysis:
+             A Survey of the Formalism and Comparison with
+             Augmented Transistion Networks",
+    journal = "Artificial Intelligence",
+    pages = "231--278",
+    year = 1980,
+    volume = 13,
+    number = 3,
+    publisher = nh,
+    annote = "compilacao, geradores, parsing,
+              linguagem formal natural, gramaticas, prog logica"
+    }
+
+@article{Szp87a,
+    author = "Stan Szpakowicz",
+    title = "Logic Grammars",
+    journal = "BYTE",
+    pages = "185--195",
+    year = 1987,
+    month = Aug,
+    publisher = "",
+    annote = "compilacao, gramaticas, parsing, prog logica"
+    }
+
+@inbook{SS86a,
+    author = "Leon Sterling and Ehud Shapiro",
+    title = "The Art of Prolog",
+    chapter = 16,
+    year = 1986,
+    series = "Series in logic programming",
+    publisher = "MIT Press",
+    annote = "prog logica"
+    }
+
+@book{Ric85a,
+    author = "Elaine Rich",
+    title = "Artificial {I}ntelligence",
+    year = 1985,
+    edition = "3rd",
+    series = "Series in Artificial Intelligence",
+    publisher = McG,
+    annote = "inteligencia artificial, representacao conhecimento"
+    }
+
+@book{NM90a,
+    author = "Ulf Nilsson and Jan Maluszynski",
+    title = "Logic, {P}rogramming and {P}rolog",
+    year = 1990,
+    edition = "1st",
+    publisher = jws,
+    annote = "prog logica, prolog, representacao conhecimento"
+    }
+
+
+@unpublished{Nil86a,
+    author = "U. Nilsson",
+    title = "{AID}: An Alternative Implementation of {DCG}s",
+    year = 1986,
+    note = "Dep. of Computer and Information Science, {Linköping}
+            University (draft version)",
+    annote = "compilacao, geradores, parsing,  prog logica"
+    }
+
+@article{MTHea83a,
+    author = "Y. Matsumoto and H. Tanaka and H. Hirakawa et al",
+    title = "{BUP}: A Bottom-Up Parser embedded in Prolog",
+    journal = "New Generation Computing",
+    year = 1983,
+    volume = 1,
+    publisher = "",
+    annote = "compilacao, geradores, parsing,  prog logica"
+    }
+
+@inproceedings{UOKea84a,
+    author = "Kuniaki Uehara and R. Ochitani and
+              O. Kakusho et al",
+    title = "A Bottom-Up Parser Based on Predicate Logic:
+             A Survey of the Formalism and its Implementation Techique",
+    booktitle = "Proc.84 -- Int. Symp. on Logic Programming, Atlantic City",
+    pages = "220--227",
+    year = 1984,
+    publisher = "IEEE",
+    note = "(Osaka University)",
+    annote = "compilacao, geradores, parsing,  prog logica"
+    }
+
+@inproceedings{Abr84a,
+    author = "Harvey Abramson",
+    title = "Definite Clause Translation Grammars",
+    booktitle = "Proc.84 -- Int. Symp. on Logic Programming, Atlantic City",
+    pages = "233--240",
+    year = 1984,
+    publisher = "IEEE",
+    note = "(University of British Columbia)",
+    annote = "compilacao, geradores, parsing,  prog logica"
+    }
+
+@article{CH87a,
+    author = "Jacques Cohen and Timothy J. Hickey",
+    title = "Parsing and Compiling using Prolog",
+    journal = "ACM Transactions on Programming Languages and Systems",
+    pages = "125--163",
+    year = 1987,
+    volume = 9,
+    number = 2,
+    publisher = acm,
+    annote = "compilacao, geradores, parsing,  prog logica"
+    }
+
+@inproceedings{Mon90a,
+    author = "Jean-François Monin",
+    title = "Comment Réussir un Compilateur Grâce à PROLOG",
+    booktitle = "Les Utilisations Industrielles du Langage PROLOG",
+    pages = "",
+    year = 1990,
+    publisher = "AFCET - Paris",
+    annote = "compilacao, prog logica"
+    }
+
+@techreport{Klein92a,
+        author = "Eduard Klein",
+        title = "Parallel Ordered Attribute Grammars",
+        year = 1992,
+        month = Jun,
+        type = "Research Report",
+        institution = gmd,
+        annote = "compilacao, geradores, espec formal"
+        }
+
+@article{KM89a,
+    author = "E. Klein and M. Martin",
+    title = "The Parser Generating System {PGS}",
+    journal = "Software -- Pratice and Experience",
+    pages = "1015--1028",
+    year = 1989,
+    volume = 19,
+    number = 11,
+    publisher = jws,
+    annote = "compilacao, geradores, parsing, sintaxe"
+    }
+
+@phdthesis{Sch79a,
+        author = "Richard Marion Schell",
+        title = "Methods for construction parallel compilers for use in a
+                 multiprocessor environment",
+        year = 1979,
+        month = Fev,
+        school = "University of Illinois",
+        annote = "compilacao, atributos, paralelismo"
+        }
+
+@phdthesis{Zar90a,
+        author = "Alan Keith Zaring",
+        title = "Parallel Evaluation in Attribute Grammar-Based Systems",
+        year = 1990,
+        month = Aug,
+        school = "Cornell University",
+        annote = "compilacao, atributos, paralelismo"
+        }
+
+@techreport{Wai93a,
+    author = "William Waite",
+    title = "A Complete Specification of a Simple Compiler",
+    year = 1993,
+    month = Jan,
+    type = "Research Report",
+    institution = "Univ. of Colorado at Boulder",
+    number = "CU-CS-638-93",
+    annote = "compilacao, geradores, espec formal, ia"
+    }
+
+@techreport{WK92a,
+    author = "Uwe Kastens and William Waite",
+    title = "Modularity and Reusability in Attribute Grammars",
+    year = 1992,
+    month = Sep,
+    type = "Research Report",
+    institution = "Univ. of Colorado at Boulder",
+    number = "CU-CS-612-92",
+    annote = "compilacao, geradores, espec formal, ia"
+    }
+
+@techreport{WS92a,
+    author = "William Waite and Anthony M. Sloane",
+    title = "Software Synthesis via Domain-Specific Software Architectures",
+    year = 1992,
+    month = Sep,
+    type = "Research Report",
+    institution = "Univ. of Colorado at Boulder",
+    number = "CU-CS-611-92",
+    annote = "compilacao, geradores, espec formal, ia"
+    }
+
+@techreport{Wai90a,
+    author = "William Waite",
+    title = "Error Analysis and Reporting in Programming Environments",
+    year = 1990,
+    month = Jan,
+    type = "Research Report",
+    institution = "Univ. of Colorado at Boulder",
+    number = "CU-CS-456-90",
+    annote = "compilacao, geradores, espec formal, ia"
+    }
+
+@techreport{GHea90b,
+    author = "R. Gray and V. Heuring  and S. Kram and
+                A. Sloam and W. Waite",
+    title = "Eli: A Complete, Flexible Compiler Construction System",
+    year = 1990,
+    month = Oct,
+    type = "Research Report",
+    institution = "Univ. of Colorado at Boulder",
+    number = "",
+    annote = "compilacao, geradores, ia"
+    }
+
+@techreport{HWF90a,
+    author = "V. Heuring and W. Waite and G. Fischer",
+    title = "Automatic Compiler Construction",
+    year = 1990,
+    month = Feb,
+    type = "Final Research Report",
+    institution = "Univ. of Colorado at Boulder",
+    number = "Contarct/DAAL 03-86-k-0100",
+    annote = "compilacao, geradores, espec formal, ia"
+    }
+
+@techreport{WGS89a,
+    author = "W. Waite and J. Grosch and F. {Schröer}",
+    title = "Three Compiler Specifications",
+    year = 1989,
+    month = Aug,
+    type = "Research Report",
+    institution = gmd,
+    number = "GMD-Studie nr. 166",
+    annote = "compilacao, geradores, espec formal"
+    }
+
+@techreport{Gro91b,
+    author = "Josef  Grosch",
+    title = "Preprocessors",
+    year = 1991,
+    type = "Research Report",
+    month = Feb,
+    institution = gmd,
+    number = "24",
+    annote = "compilacao, geradores, atributos"
+    }
+
+@techreport{Gro91a,
+    author = "Josef  Grosch",
+    title = "{A}g - {A}n {A}ttribute {E}valuator {G}enerator",
+    year = 1991,
+    type = "Research Report",
+    month = Mar,
+    institution = gmd,
+    number = "16",
+    }
+
+@techreport{GE90a,
+    author = "Josef  Grosch and Helmut Emmelmann",
+    title = "Tool {B}ox for {C}ompiler {C}onstruction",
+    year = 1990,
+    type = "Research Report",
+    month = Jan,
+    institution = gmd,
+    number = "20",
+    annote = "compilacao, geradores, parsing"
+    }
+
+@techreport{Gro89e,
+    author = "Josef  Grosch",
+    title = "Tool Support for Data Structures",
+    year = 1989,
+    type = "Research Report",
+    month = Nov,
+    institution = gmd,
+    number = "17",
+    annote = "compilacao, geradores, programacao, estruturas dados"
+    }
+
+@techreport{Gro89d,
+    author = "Josef  Grosch",
+    title = "Efficient and Comfortable Error Recovery in
+                Recursive Descent Parsers",
+    year = 1989,
+    type = "Research Report",
+    month = Dec,
+    institution = gmd,
+    number = "19",
+    annote = "compilacao, geradores, parsing, tratamento erros"
+    }
+
+@techreport{Gro89c,
+    author = "Josef  Grosch",
+    title = "Object-Oriented Attribute Grammars",
+    year = 1989,
+    type = "Research Report",
+    month = Dec,
+    institution = gmd,
+    number = "18",
+    annote = "compilacao, geradores, atributos, oobjectos"
+    }
+
+@techreport{Gro89b,
+    author = "Josef  Grosch",
+    title = "Ag - An Attribute Evaluator Generator",
+    year = 1989,
+    type = "Research Report",
+    month = Aug,
+    institution = gmd,
+    number = "16",
+    annote = "compilacao, geradores, atributos"
+    }
+
+@techreport{Gro89a,
+    author = "Josef  Grosch",
+    title = "Ast - A Generator for Abstract Syntax Trees",
+    year = 1989,
+    type = "Research Report",
+    month = Aug,
+    institution = gmd,
+    number = "15",
+    annote = "compilacao, geradores, arvores sintaxe"
+    }
+
+@techreport{Gro88c,
+    author = "Josef  Grosch",
+    title = "Generators for {H}igh-{S}peed {F}ront-{E}nds",
+    year = 1988,
+    type = "Research Report",
+    month = Sep,
+    institution = gmd,
+    number = "11",
+    annote = "compilacao, geradores, parsing, sintaxe"
+    }
+
+@techreport{Gro88b,
+    author = "Josef  Grosch",
+    title = "{LALR} - A Generator for Efficient Parsers",
+    year = 1988,
+    type = "Research Report",
+    month = Oct,
+    institution = gmd,
+    number = "10",
+    annote = "compilacao, geradores, parsing, sintaxe"
+    }
+
+@techreport{Gro88a,
+    author = "Josef  Grosch",
+    title = "Selected Examples of Scanner Specifications",
+    year = 1988,
+    type = "Research Report",
+    month = Mar,
+    institution = gmd,
+    number = "7",
+    annote = "compilacao, geradores, analise lexica"
+    }
+
+@techreport{Gro87a,
+    author = "Josef  Grosch",
+    title = "Rex - A Scanner Generator",
+    year = 1987,
+    type = "Research Report",
+    month = Dec,
+    institution = gmd,
+    number = "5",
+    annote = "compilacao, geradores, analise lexica"
+    }
+
+@techreport{Vie88a,
+    author = "Bertram Vielsack",
+    title = "The Parser Generators Lalr and Ell",
+    year = 1988,
+    type = "Research Report",
+    month = Apr,
+    institution = gmd,
+    number = "8",
+    annote = "compilacao, geradores, parsing, sintaxe"
+    }
+
+@techreport{Emm89a,
+    author = "Helmut Emmelmann",
+    title = "{BEG} - A Back End Generator, User Manual",
+    year = 1989,
+    type = "Research Report",
+    month = Dec,
+    institution = gmd,
+    number = "Arbeitspapiere der GMD 420",
+    annote = "compilacao, geradores, geracao codigo"
+    }
+
+@techreport{Fer93b,
+        author = "Maria Estrela R. Ferreira",
+        title = "O {A}mbiente {MALDE II} ",
+        publisher = {Departamento de Informática},
+        address = {Universidade do Minho},
+    type = "Relatorio de Est'agio",
+        year = 1993,
+    annote = "compilacao, ambientes, atributos, modularidade, prototipagem"
+        }
+
+@manual{Fer93a,
+        author = "Maria Estrela R. Ferreira",
+        title = "{MALDE II}: Manual de Utilização ",
+    year = 1993,
+    month = Sep,
+    organization = gdcc,
+    edition = "1.st",
+    number = "UM maldeii93",
+    annote = "ambientes desenvolvimento"
+    }
+
+@techreport{PSV93a,
+        author = "Elvira Pimenta and Isabel Silva and Maria Céu Vivas",
+        title = "Introdução ao {MALDE II} ",
+        publisher = {Departamento de Informática},
+        address = {Universidade do Minho},
+    type = "Relatorio de Projecto",
+        year = 1993,
+    annote = "compilacao, ambientes, atributos, modularidade, prototipagem"
+        }
+
+@techreport{CCS93a,
+        author = "José C. Carvalhal and Manuel Coelho
+                  and José C. Espirito Santo",
+        title = " {MALDE I} ",
+        publisher = {Departamento de Informática},
+        address = {Universidade do Minho},
+    type = "Relatorio de Projecto",
+        year = 1993,
+    annote = "compilacao, ambientes, atributos, modularidade, prototipagem"
+        }
+
+@techreport{Nev92a,
+    author = "F. Luis Neves",
+    title = "Visualização {G}r'afica de {C}onjuntos de
+                 {A}tributos {R}elacionados",
+    year = 1992,
+    type = "Relatorio de Estágio",
+    month = Oct,
+    institution = gdcc,
+    number = "CCr00192",
+    annote = "compilacao, interfaces, espec formal"
+    }
+
+@techreport{Pir91a,
+    author = "M. Fátima Pires",
+    title = "Knowledge Representation Language",
+    year = 1991,
+    type = "Relatorio de Estágio",
+    month = Jun,
+    institution = gdcc,
+    number = "CCr00391",
+    annote = "prog oobjectos, espec formal"
+    }
+
+@techreport{Lop91b,
+    author = "Filipe Lopes",
+    title = "Implementação de {MASLP} em {CCS}",
+    year = 1991,
+    type = "Relatorio de Projecto",
+    month = Mar,
+    institution = gdcc,
+    number = "CCr01191",
+    annote = "compilacao, ambientes desenvolvimento, prog oobjectos,
+                  espec formal"
+    }
+
+@techreport{Lop91a,
+    author = "Filipe Lopes",
+    title = "Comunicações para a {L}inguagem {O}
+                 e {I}nterface {E}ngine {S}erver",
+    year = 1991,
+    type = "Relatorio de Estágio",
+    month = Oct,
+    institution = gdcc,
+    number = "CCr00991",
+    annote = "prog oobjectos, espec formal, agentes comunicantes,
+                  BIM Prolog"
+    }
+
+@techreport{Pac90a,
+    author = "Olga Maria Pacheco",
+    title = "Concepção dum {S}istema {P}ericial para o {R}egisto
+                 {P}redial",
+    year = 1990,
+    type = "Relatorio de Estágio",
+    institution = gdcc,
+    number = "CCr01391",
+    annote = "ai, sistemas periciais, prog logica, espec formal"
+    }
+
+@techreport{Gre91a,
+    author = "Joao Grenhas",
+    title = "{NYAGSL}: {N}ot {Y}et {A G}ood {S}pecification {L}anguage",
+    year = 1991,
+    type = "Relatorio de Projecto",
+    month = May,
+    institution = gdcc,
+    number = "",
+    annote = ""
+    }
+
+@techreport{MD91a,
+    author = "Carla Mendes and Duarte Duarte",
+    title = "{GIG}: {G}ramática {I}nteractiva {G}uardada",
+    year = 1991,
+    type = "Relatorio de Projecto",
+    month = May,
+    institution = gdcc,
+    number = "",
+    annote = ""
+    }
+
+@techreport{FM91a,
+    author = "M. Joao Frade and José E. Pina Miranda",
+    title = "Projecto {XSBProlog}",
+    year = 1991,
+    type = "Relatorio de Projecto",
+    month = May,
+    institution = gdcc,
+    number = "CCr01291",
+    annote = "prog logica, multi-programacao, espec formal, X-Windows"
+    }
+
+@techreport{Fra91a,
+    author = "M. Joao Frade",
+    title = "Implementação da {L}inguagem {O}
+                 -- Parte Dinamica",
+    year = 1991,
+    type = "Relatorio de Estágio",
+    month = Sep,
+    institution = gdcc,
+    number = "CCr00491",
+    annote = "prog oobjectos, espec formal, Lisp"
+    }
+
+@techreport{Pina91a,
+    author = "José Eduardo Pina Miranda",
+    title = "Implementação da {L}inguagem {O}
+                 -- Parte Estática",
+    year = 1991,
+    type = "Relatorio de Estágio",
+    month = Sep,
+    institution = gdcc,
+    number = "CCr00591",
+    annote = "prog oobjectos, espec formal, Lisp"
+    }
+
+@techreport{Pin91b,
+    author = "Luis Filipe Pinto",
+    title = "Animador de Especificações {OBLOG} -- versão 2",
+    year = 1991,
+    type = "Relatorio de Estágio",
+    month = Aug,
+    institution = gdcc,
+    number = "CCr00291",
+    annote = "compilacao, interfaces, prog logica, prog oobjectos,
+                  espec formal"
+    }
+
+@techreport{Pin91a,
+    author = "Luis Filipe Pinto",
+    title = "Animador de Especificações {OBLOG}",
+    year = 1991,
+    type = "Relatorio de Projecto",
+    month = Mar,
+    institution = gdcc,
+    number = "CCr00191",
+    annote = "compilacao, ambientes desenvolvimento, prog oobjectos,
+                  espec formal"
+    }
+
+@techreport{AAea91a,
+    author = "A. Alves and A. Amador and A. Miranda and
+                  C. Ribeiro and F. Ferreira and J. Moreira and
+                  L. Ferreira and L. Neves",
+    title = "Compilador para o sistema {GLiTCH}",
+    type = "Relatorio de Projecto de Compiladores",
+    year = 1991,
+    month = Jul,
+    institution = gdcc,
+    number = "",
+    annote = "compilacao, ambientes desenvolvimento, prog oobjectos,
+                  espec formal"
+    }
+
+@techreport{PSR92a,
+    author = "Henrique Pereira and Jorge Silva and Jose Ribeiro",
+    title = "{XO}blog -- {I}nterface para o {A}nimador de {OBLOG}",
+    year = 1992,
+    type = "Relatorio de Projecto",
+    month = Apr,
+    institution = gdcc,
+    number = "CCr00192",
+    annote = "gramaticas atributos, ambientes desenvolvimento,
+                  prog oobjectos, espec formal, interfaces, xwindows"
+    }
+
+@techreport{SBA92a,
+    author = "Rui Soares and Julio Bigas and Pedro Areias",
+    title = "Implementação duma rede neural em {T}ransputers",
+    year = 1992,
+    month = Apr,
+    type = "Relatorio de Projecto",
+    institution = gdcc,
+    number = "",
+    annote = "redes neuronais, transputers, occam"
+    }
+
+@techreport{Sar93a,
+        author = "Joao Saraiva",
+        title = "{C}álculo de {A}tributos {C}oncorrente",
+        year = 1993,
+        type = "Tese de Mestrado",
+        month = Sep,
+        institution = gdcc,
+        number = ""
+        }
+
+@techreport{Sar91b,
+        author = "Joao Saraiva",
+        title = "Um {C}ompilador para a {L}inguagem {O}",
+        year = 1991,
+        type = "Relatório de Estágio",
+        month = Sep,
+        institution = gdcc,
+        number = "CCr00691"
+        }
+
+@techreport{Sar91a,
+        author = "Joao Saraiva",
+        title = "{O} {G}erador de {C}alculadores de {A}tributos: {AE}",
+        year = 1991,
+        type = "Relatório de Instalação",
+        month = Sep,
+        institution = gdcc,
+        number = "CCr00791"
+        }
+
+@techreport{Fer92a,
+        author = "Adalberto G. Ferreira",
+        title = "{GIA} -- {G}estor de  {I}nterfaces",
+        year = 1992,
+        type = "Relatório de Estágio",
+        month = Mar,
+        institution = gdcc,
+        number = ""
+        }
+
+@techreport{SF91b,
+        author = "Pedro P. Silva and Adalberto G. Ferreira",
+        title = "{P}rojecto {CTB}: {R}elatório",
+        year = 1991,
+        type = "Relatório de Projecto",
+        month = Sep,
+        institution = gdcc,
+        number = "CCr01091"
+        }
+
+@techreport{SF91a,
+        author = "Pedro P. Silva and Adalberto G. Ferreira",
+        title = "{O} {G}erador de {A}nalisadores {L}éxicos e
+                         {S}intácticos: {FEGOR}",
+        year = 1991,
+        type = "Relatório de Projecto",
+        month = Aug,
+        institution = gdcc,
+        number = "CCr00891"
+        }
+
+@techreport{SF90c,
+        author = "Pedro P. Silva and Adalberto G. Ferreira",
+        title = "{O} {G}erador de {A}nalisadores {S}intácticos: {ELL}",
+        year = 1990,
+        type = "Relatório de Instalação",
+        month = Dec,
+        institution = gdcc,
+        number = "CCr00390"
+        }
+
+@techreport{SF90b,
+    author = "Pedro P. Silva and Adalberto G. Ferreira",
+    title = "O Gerador de Analisadores Sintácticos: {LALR}",
+    year = 1990,
+    type = "Relatório de Instalação",
+    month = Oct,
+    institution = gdcc,
+    number = "CCr00290",
+    annote = "compilacao, geradores, parsing, sintaxe"
+    }
+
+@techreport{SF90a,
+    author = "Pedro P. Silva and Adalberto G. Ferreira",
+    title = "O Gerador de Analisadores Léxicos: {REX}",
+    year = 1990,
+    type = "Relatório de Instalação",
+    month = Oct,
+    institution = gdcc,
+    number = "CCr00190",
+    annote = "compilacao, geradores, analise lexica"
+    }
+
+@techreport{Roc92a,
+        author = "Jorge G. Rocha",
+        title = "The Synthesizer Generator - Tutorial",
+        publisher = {Departamento de Informática},
+        address = {Universidade do Minho},
+    type = "Relatório de Instalação",
+        year = 1992,
+    annote = "compilacao, geradores, gramaticas atributos,
+                  calculo incremental"
+        }
+
+@techreport{MR87a,
+    author = "J.A. Mendes and A. Roeck",
+    title = "Heuristic Grammar Annotations and Search Space Prunning:
+                Support for Bi-directional Parsing Strategies",
+    year = 1987,
+    type = "Research Report",
+    institution = "Dep. of Computer Science, Univ. of Essex",
+    number = "",
+    annote = "parsing, linguagem natural, prog logica, gramaticas, sintaxe"
+    }
+
+@techreport{SR87a,
+    author = "S. Steel and A. Roeck",
+    title = "Bidirectional Chart Parsing",
+    year = 1987,
+    type = "Research Report",
+    institution = "Dep. of Computer Science, Univ. of Essex",
+    number = "",
+    annote = "parsing, linguagem natural, prog logica, gramaticas, sintaxe"
+    }
+
+@techreport{SB93a,
+        author = "Thierry Le Sergent and Bernard Berthomieu",
+    title = "Incremental, Multi-threaded Garbage Collection on
+                 Virtually Shared Memory Architectures",
+    year = 1993,
+    type = "Research Report",
+    institution = laas,
+    number = "",
+    annote = "prog funcional, ML, CCS, ambientes prog, concorrencia"
+    }
+
+@techreport{Ber89a,
+        author = "Bernard Berthomieu",
+    title = "Implementing {CCS}, the {LCS} experiment:
+                 a summary of the project",
+    year = 1989,
+    type = "Research Report",
+    institution = laas,
+    number = "LAAS report num. 89425",
+    annote = "prog funcional, ML, CCS, ambientes prog, concorrencia"
+    }
+
+@manual{Ber91a,
+        author = "Bernard Berthomieu",
+    title = "{LCS} Users Manual",
+    organization = laas,
+    edition = "version 3.0",
+    year = 1991,
+    month = Sep,
+    annote = "prog funcional, ML, CCS, ambientes prog, concorrencia"
+    }
+
+@manual{ORM91a,
+        author = "The {Mjolner} {G}roup",
+    title = "Mjolner/{ORM} User's Guide",
+    organization = "Dep. of Computer Science / Lund University",
+    edition = "1.st",
+    year = 1991,
+    month = May,
+    annote = "compilacao incremental, atributos, ambientes prog, geradores"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@techreport{Mag83a,
+    author = "B. Magnusson",
+    title = "Code-{O}bjects: A {S}upport for {I}ncremental
+                 {C}ompilation",
+    year = 1983,
+    type = "Research Report",
+    month = "",
+    institution = lund,
+    number = "LU-CS-TR:83-5",
+    annote = "compilacao incremental, atributos, ambientes prog, geradores"
+    }
+
