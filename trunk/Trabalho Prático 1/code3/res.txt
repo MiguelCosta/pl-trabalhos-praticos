@@ -1,0 +1,137 @@
+Categoria: inbook
+	Chave: Val87a
+	Autor: José M. Valença
+	Titulo: Algorítmos
+
+	Chave: Val90a
+	Autor: José M. Valença
+	Titulo: Processos, {O}bjectos e {C}omunicação
+                ({O}pção I - {MCC})
+
+Categoria: techreport
+	Chave: Sco71a
+	Autor: D. S.  Scott
+	Titulo: Outline of a mathematical theory of computation
+
+	Chave: BW83a
+	Autor: Manfred Broy and Martin Wirsing
+	Titulo: Generalized Heterogeneous Algebras and Partial Interpretations
+
+Categoria: article
+	Chave: NF89a
+	Autor: Tim Nicholson and Normann Foo
+	Titulo: A Denotational Semantics for {PROLOG}
+
+Categoria: inproceedings
+	Chave: Hol87a
+	Autor: Niklas Holsti
+	Titulo: Incremental Interaction by Syntax Transformation
+
+Categoria: book
+	Chave: KR88a
+	Autor: Brian W. Kernighan and Dennis M. Ritchie1
+	Titulo: The C Programming Language
+
+	Chave: ASU86a
+	Autor: A. V. Aho and R. Sethi and J. D. Ullman
+	Titulo: Compilers Principles, Techniques and Tools
+
+	Chave: citeulike:1033375
+	Autor: Aho, Alfred  V.  and Lam, Monica  S.  and Sethi, Ravi   and Ullman, Jeffrey  D. 
+	Titulo: Compilers: Principles, Techniques, and Tools (2nd Edition)
+
+	Chave: Guy90a
+	Autor: Guy L. Steele
+	Titulo: Common {L}isp -- The {L}anguage
+
+	Chave: Sto77a
+	Autor: J. E. Stoy
+	Titulo: Denotational {S}emantics: the {S}cott-{S}trachey
+                 approach to programming language theory
+
+	Chave: Oli91a
+	Autor: José Nuno Oliveira
+	Titulo: Especificação & {S}emântica
+
+Categoria: phdthesis
+	Chave: Bou84a
+	Autor: Pierre Boullier
+	Titulo: Contribution à la Construction Automatique
+                        d'Analyseur Lexicographiques et Syntaxiques
+
+	Chave: Mos75a
+	Autor: P. D. Mosses
+	Titulo: Mathematical Semantics and Compiler Generation
+
+Autor: Manfred Broy and Martin Wirsing
+	Categoria: techreport
+	Chave: BW83a
+	Titulo: Generalized Heterogeneous Algebras and Partial Interpretations
+
+Autor: José M. Valença
+	Categoria: inbook
+	Chave: Val87a
+	Titulo: Algorítmos
+
+	Categoria: inbook
+	Chave: Val90a
+	Titulo: Processos, {O}bjectos e {C}omunicação
+                ({O}pção I - {MCC})
+
+Autor: José Nuno Oliveira
+	Categoria: book
+	Chave: Oli91a
+	Titulo: Especificação & {S}emântica
+
+Autor: J. E. Stoy
+	Categoria: book
+	Chave: Sto77a
+	Titulo: Denotational {S}emantics: the {S}cott-{S}trachey
+                 approach to programming language theory
+
+Autor: P. D. Mosses
+	Categoria: phdthesis
+	Chave: Mos75a
+	Titulo: Mathematical Semantics and Compiler Generation
+
+Autor: D. S.  Scott
+	Categoria: techreport
+	Chave: Sco71a
+	Titulo: Outline of a mathematical theory of computation
+
+Autor: Tim Nicholson and Normann Foo
+	Categoria: article
+	Chave: NF89a
+	Titulo: A Denotational Semantics for {PROLOG}
+
+Autor: Niklas Holsti
+	Categoria: inproceedings
+	Chave: Hol87a
+	Titulo: Incremental Interaction by Syntax Transformation
+
+Autor: Guy L. Steele
+	Categoria: book
+	Chave: Guy90a
+	Titulo: Common {L}isp -- The {L}anguage
+
+Autor: Aho, Alfred  V.  and Lam, Monica  S.  and Sethi, Ravi   and Ullman, Jeffrey  D. 
+	Categoria: book
+	Chave: citeulike:1033375
+	Titulo: Compilers: Principles, Techniques, and Tools (2nd Edition)
+
+Autor: A. V. Aho and R. Sethi and J. D. Ullman
+	Categoria: book
+	Chave: ASU86a
+	Titulo: Compilers Principles, Techniques and Tools
+
+Autor: Brian W. Kernighan and Dennis M. Ritchie1
+	Categoria: book
+	Chave: KR88a
+	Titulo: The C Programming Language
+
+Autor: Pierre Boullier
+	Categoria: phdthesis
+	Chave: Bou84a
+	Titulo: Contribution à la Construction Automatique
+                        d'Analyseur Lexicographiques et Syntaxiques
+
