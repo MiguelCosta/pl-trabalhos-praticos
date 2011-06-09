@@ -1,0 +1,15 @@
+PROGRAM logoissExemplo { DECLARATIONS
+x = 100 , y seta INTEGER ;
+z seta Boolean ;
+w = TRUE seta Boolean ;
+STATEMENTS
+FORWARD x
+RRIGHT
+y = 100;
+FORWARD y
+RRIGHT
+x = x − 100;
+FORWARD x + 100
+RRIGHT
+FORWARD 100
+}
