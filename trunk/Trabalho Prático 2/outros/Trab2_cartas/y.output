@@ -1,0 +1,2065 @@
+Grammar
+
+    0 $accept: LISS $end
+
+    1 LISS: PROGRAM IDENT '{' Body '}'
+
+    2 @1: /* empty */
+
+    3 Body: DECLARATIONS Declarations @1 STATEMENTS Statements
+
+    4 Declarations: Declaration
+    5             | Declarations Declaration
+
+    6 Declaration: Variable_Declaration
+
+    7 Variable_Declaration: Vars SETA Type ';'
+
+    8 Vars: Var
+    9     | Vars ',' Var
+
+   10 Var: IDENT Value_Var
+
+   11 Value_Var: /* empty */
+   12          | '=' Inic_Var
+
+   13 Type: INTEGER
+   14     | BOOLEAN
+   15     | ARRAY SIZE NUM
+
+   16 Inic_Var: Constant
+   17         | Array_Definition
+
+   18 Constant: '(' Sign NUM ')'
+   19         | TRUE
+   20         | FALSE
+
+   21 Sign: /* empty */
+   22     | '+'
+   23     | '-'
+
+   24 Array_Definition: '[' Array_Initialization ']'
+
+   25 Array_Initialization: Elem
+   26                     | Array_Initialization ',' Elem
+
+   27 Elem: Sign NUM
+
+   28 Statements: Statement
+   29           | Statements Statement
+
+   30 Statement: Turtle_Commands
+   31          | Assignment
+   32          | Conditional_Statement
+   33          | Iterative_Statement
+
+   34 Turtle_Commands: Step
+   35                | Rotate
+   36                | Mode
+   37                | Dialogue
+   38                | Location
+
+   39 @2: /* empty */
+
+   40 Step: FORWARD @2 Expression
+
+   41 @3: /* empty */
+
+   42 Step: BACKWARD @3 Expression
+
+   43 Rotate: RRIGHT
+   44       | RLEFT
+
+   45 Mode: PEN UP
+   46     | PEN DOWN
+
+   47 Dialogue: Say_Statement
+   48         | Ask_Statement
+
+   49 Location: GOTO NUM ',' NUM
+   50         | WHERE '?'
+
+   51 Assignment: Variable '=' Expression
+
+   52 Variable: IDENT Array_Acess
+
+   53 Array_Acess: /* empty */
+   54            | '[' Single_Expression ']'
+
+   55 Expression: Single_Expression
+   56           | Expression Rel_Op Single_Expression
+
+   57 Single_Expression: Term
+   58                  | Single_Expression Add_Op Term
+
+   59 Term: Factor
+   60     | Term Mul_Op Factor
+
+   61 Factor: Constant
+   62       | Variable
+   63       | SuccOrPred
+   64       | '(' '!' Expression ')'
+   65       | '(' '+' Expression ')'
+   66       | '(' '-' Expression ')'
+   67       | '(' Expression ')'
+
+   68 Add_Op: '+'
+   69       | '-'
+   70       | OU
+
+   71 Mul_Op: '*'
+   72       | '/'
+   73       | E
+   74       | MULTMULT
+
+   75 Rel_Op: IGUAL
+   76       | DIF
+   77       | '<'
+   78       | '>'
+   79       | MENORIGUAL
+   80       | MAIORIGUAL
+   81       | IN
+
+   82 SuccOrPred: SuccPred IDENT
+
+   83 SuccPred: SUCC
+   84         | PRED
+
+   85 Say_Statement: SAY '(' Expression ')'
+
+   86 Ask_Statement: ASK '(' STRING ',' Variable ')'
+
+   87 Conditional_Statement: IfThenElse_Stat
+
+   88 Iterative_Statement: While_Stat
+
+   89 IfThenElse_Stat: IF Expression THEN '{' Statements '}' Else_Expression
+
+   90 Else_Expression: /* empty */
+   91                | ELSE '{' Statements '}'
+
+   92 While_Stat: WHILE '(' Expression ')' '{' Statements '}'
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+'!' (33) 64
+'(' (40) 18 64 65 66 67 85 86 92
+')' (41) 18 64 65 66 67 85 86 92
+'*' (42) 71
+'+' (43) 22 65 68
+',' (44) 9 26 49 86
+'-' (45) 23 66 69
+'/' (47) 72
+';' (59) 7
+'<' (60) 77
+'=' (61) 12 51
+'>' (62) 78
+'?' (63) 50
+'[' (91) 24 54
+']' (93) 24 54
+'{' (123) 1 89 91 92
+'}' (125) 1 89 91 92
+error (256)
+DECLARATIONS (258) 3
+STATEMENTS (259) 3
+SUCC (260) 83
+PRED (261) 84
+IF (262) 89
+ELSE (263) 91
+THEN (264) 89
+WHILE (265) 92
+INTEGER (266) 13
+BOOLEAN (267) 14
+ARRAY (268) 15
+SIZE (269) 15
+TRUE (270) 19
+FALSE (271) 20
+FORWARD (272) 40
+BACKWARD (273) 42
+RRIGHT (274) 43
+RLEFT (275) 44
+PEN (276) 45 46
+UP (277) 45
+DOWN (278) 46
+GOTO (279) 49
+WHERE (280) 50
+SAY (281) 85
+ASK (282) 86
+OU (283) 70
+E (284) 73
+MULTMULT (285) 74
+IGUAL (286) 75
+DIF (287) 76
+MENORIGUAL (288) 79
+MAIORIGUAL (289) 80
+IN (290) 81
+SETA (291) 7
+PROGRAM (292) 1
+NUM (293) 15 18 27 49
+STRING (294) 86
+IDENT (295) 1 10 52 82
+
+
+Nonterminals, with rules where they appear
+
+$accept (58)
+    on left: 0
+LISS (59)
+    on left: 1, on right: 0
+Body (60)
+    on left: 3, on right: 1
+@1 (61)
+    on left: 2, on right: 3
+Declarations (62)
+    on left: 4 5, on right: 3 5
+Declaration (63)
+    on left: 6, on right: 4 5
+Variable_Declaration (64)
+    on left: 7, on right: 6
+Vars (65)
+    on left: 8 9, on right: 7 9
+Var (66)
+    on left: 10, on right: 8 9
+Value_Var (67)
+    on left: 11 12, on right: 10
+Type (68)
+    on left: 13 14 15, on right: 7
+Inic_Var (69)
+    on left: 16 17, on right: 12
+Constant (70)
+    on left: 18 19 20, on right: 16 61
+Sign (71)
+    on left: 21 22 23, on right: 18 27
+Array_Definition (72)
+    on left: 24, on right: 17
+Array_Initialization (73)
+    on left: 25 26, on right: 24 26
+Elem (74)
+    on left: 27, on right: 25 26
+Statements (75)
+    on left: 28 29, on right: 3 29 89 91 92
+Statement (76)
+    on left: 30 31 32 33, on right: 28 29
+Turtle_Commands (77)
+    on left: 34 35 36 37 38, on right: 30
+Step (78)
+    on left: 40 42, on right: 34
+@2 (79)
+    on left: 39, on right: 40
+@3 (80)
+    on left: 41, on right: 42
+Rotate (81)
+    on left: 43 44, on right: 35
+Mode (82)
+    on left: 45 46, on right: 36
+Dialogue (83)
+    on left: 47 48, on right: 37
+Location (84)
+    on left: 49 50, on right: 38
+Assignment (85)
+    on left: 51, on right: 31
+Variable (86)
+    on left: 52, on right: 51 62 86
+Array_Acess (87)
+    on left: 53 54, on right: 52
+Expression (88)
+    on left: 55 56, on right: 40 42 51 56 64 65 66 67 85 89 92
+Single_Expression (89)
+    on left: 57 58, on right: 54 55 56 58
+Term (90)
+    on left: 59 60, on right: 57 58 60
+Factor (91)
+    on left: 61 62 63 64 65 66 67, on right: 59 60
+Add_Op (92)
+    on left: 68 69 70, on right: 58
+Mul_Op (93)
+    on left: 71 72 73 74, on right: 60
+Rel_Op (94)
+    on left: 75 76 77 78 79 80 81, on right: 56
+SuccOrPred (95)
+    on left: 82, on right: 63
+SuccPred (96)
+    on left: 83 84, on right: 82
+Say_Statement (97)
+    on left: 85, on right: 47
+Ask_Statement (98)
+    on left: 86, on right: 48
+Conditional_Statement (99)
+    on left: 87, on right: 32
+Iterative_Statement (100)
+    on left: 88, on right: 33
+IfThenElse_Stat (101)
+    on left: 89, on right: 87
+Else_Expression (102)
+    on left: 90 91, on right: 89
+While_Stat (103)
+    on left: 92, on right: 88
+
+
+state 0
+
+    0 $accept: . LISS $end
+
+    PROGRAM  shift, and go to state 1
+
+    LISS  go to state 2
+
+
+state 1
+
+    1 LISS: PROGRAM . IDENT '{' Body '}'
+
+    IDENT  shift, and go to state 3
+
+
+state 2
+
+    0 $accept: LISS . $end
+
+    $end  shift, and go to state 4
+
+
+state 3
+
+    1 LISS: PROGRAM IDENT . '{' Body '}'
+
+    '{'  shift, and go to state 5
+
+
+state 4
+
+    0 $accept: LISS $end .
+
+    $default  accept
+
+
+state 5
+
+    1 LISS: PROGRAM IDENT '{' . Body '}'
+
+    DECLARATIONS  shift, and go to state 6
+
+    Body  go to state 7
+
+
+state 6
+
+    3 Body: DECLARATIONS . Declarations @1 STATEMENTS Statements
+
+    IDENT  shift, and go to state 8
+
+    Declarations          go to state 9
+    Declaration           go to state 10
+    Variable_Declaration  go to state 11
+    Vars                  go to state 12
+    Var                   go to state 13
+
+
+state 7
+
+    1 LISS: PROGRAM IDENT '{' Body . '}'
+
+    '}'  shift, and go to state 14
+
+
+state 8
+
+   10 Var: IDENT . Value_Var
+
+    '='  shift, and go to state 15
+
+    $default  reduce using rule 11 (Value_Var)
+
+    Value_Var  go to state 16
+
+
+state 9
+
+    3 Body: DECLARATIONS Declarations . @1 STATEMENTS Statements
+    5 Declarations: Declarations . Declaration
+
+    IDENT  shift, and go to state 8
+
+    $default  reduce using rule 2 (@1)
+
+    @1                    go to state 17
+    Declaration           go to state 18
+    Variable_Declaration  go to state 11
+    Vars                  go to state 12
+    Var                   go to state 13
+
+
+state 10
+
+    4 Declarations: Declaration .
+
+    $default  reduce using rule 4 (Declarations)
+
+
+state 11
+
+    6 Declaration: Variable_Declaration .
+
+    $default  reduce using rule 6 (Declaration)
+
+
+state 12
+
+    7 Variable_Declaration: Vars . SETA Type ';'
+    9 Vars: Vars . ',' Var
+
+    SETA  shift, and go to state 19
+    ','   shift, and go to state 20
+
+
+state 13
+
+    8 Vars: Var .
+
+    $default  reduce using rule 8 (Vars)
+
+
+state 14
+
+    1 LISS: PROGRAM IDENT '{' Body '}' .
+
+    $default  reduce using rule 1 (LISS)
+
+
+state 15
+
+   12 Value_Var: '=' . Inic_Var
+
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    '('    shift, and go to state 23
+    '['    shift, and go to state 24
+
+    Inic_Var          go to state 25
+    Constant          go to state 26
+    Array_Definition  go to state 27
+
+
+state 16
+
+   10 Var: IDENT Value_Var .
+
+    $default  reduce using rule 10 (Var)
+
+
+state 17
+
+    3 Body: DECLARATIONS Declarations @1 . STATEMENTS Statements
+
+    STATEMENTS  shift, and go to state 28
+
+
+state 18
+
+    5 Declarations: Declarations Declaration .
+
+    $default  reduce using rule 5 (Declarations)
+
+
+state 19
+
+    7 Variable_Declaration: Vars SETA . Type ';'
+
+    INTEGER  shift, and go to state 29
+    BOOLEAN  shift, and go to state 30
+    ARRAY    shift, and go to state 31
+
+    Type  go to state 32
+
+
+state 20
+
+    9 Vars: Vars ',' . Var
+
+    IDENT  shift, and go to state 8
+
+    Var  go to state 33
+
+
+state 21
+
+   19 Constant: TRUE .
+
+    $default  reduce using rule 19 (Constant)
+
+
+state 22
+
+   20 Constant: FALSE .
+
+    $default  reduce using rule 20 (Constant)
+
+
+state 23
+
+   18 Constant: '(' . Sign NUM ')'
+
+    '+'  shift, and go to state 34
+    '-'  shift, and go to state 35
+
+    $default  reduce using rule 21 (Sign)
+
+    Sign  go to state 36
+
+
+state 24
+
+   24 Array_Definition: '[' . Array_Initialization ']'
+
+    '+'  shift, and go to state 34
+    '-'  shift, and go to state 35
+
+    $default  reduce using rule 21 (Sign)
+
+    Sign                  go to state 37
+    Array_Initialization  go to state 38
+    Elem                  go to state 39
+
+
+state 25
+
+   12 Value_Var: '=' Inic_Var .
+
+    $default  reduce using rule 12 (Value_Var)
+
+
+state 26
+
+   16 Inic_Var: Constant .
+
+    $default  reduce using rule 16 (Inic_Var)
+
+
+state 27
+
+   17 Inic_Var: Array_Definition .
+
+    $default  reduce using rule 17 (Inic_Var)
+
+
+state 28
+
+    3 Body: DECLARATIONS Declarations @1 STATEMENTS . Statements
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+
+    Statements             go to state 52
+    Statement              go to state 53
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 29
+
+   13 Type: INTEGER .
+
+    $default  reduce using rule 13 (Type)
+
+
+state 30
+
+   14 Type: BOOLEAN .
+
+    $default  reduce using rule 14 (Type)
+
+
+state 31
+
+   15 Type: ARRAY . SIZE NUM
+
+    SIZE  shift, and go to state 68
+
+
+state 32
+
+    7 Variable_Declaration: Vars SETA Type . ';'
+
+    ';'  shift, and go to state 69
+
+
+state 33
+
+    9 Vars: Vars ',' Var .
+
+    $default  reduce using rule 9 (Vars)
+
+
+state 34
+
+   22 Sign: '+' .
+
+    $default  reduce using rule 22 (Sign)
+
+
+state 35
+
+   23 Sign: '-' .
+
+    $default  reduce using rule 23 (Sign)
+
+
+state 36
+
+   18 Constant: '(' Sign . NUM ')'
+
+    NUM  shift, and go to state 70
+
+
+state 37
+
+   27 Elem: Sign . NUM
+
+    NUM  shift, and go to state 71
+
+
+state 38
+
+   24 Array_Definition: '[' Array_Initialization . ']'
+   26 Array_Initialization: Array_Initialization . ',' Elem
+
+    ','  shift, and go to state 72
+    ']'  shift, and go to state 73
+
+
+state 39
+
+   25 Array_Initialization: Elem .
+
+    $default  reduce using rule 25 (Array_Initialization)
+
+
+state 40
+
+   89 IfThenElse_Stat: IF . Expression THEN '{' Statements '}' Else_Expression
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 79
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 41
+
+   92 While_Stat: WHILE . '(' Expression ')' '{' Statements '}'
+
+    '('  shift, and go to state 85
+
+
+state 42
+
+   40 Step: FORWARD . @2 Expression
+
+    $default  reduce using rule 39 (@2)
+
+    @2  go to state 86
+
+
+state 43
+
+   42 Step: BACKWARD . @3 Expression
+
+    $default  reduce using rule 41 (@3)
+
+    @3  go to state 87
+
+
+state 44
+
+   43 Rotate: RRIGHT .
+
+    $default  reduce using rule 43 (Rotate)
+
+
+state 45
+
+   44 Rotate: RLEFT .
+
+    $default  reduce using rule 44 (Rotate)
+
+
+state 46
+
+   45 Mode: PEN . UP
+   46     | PEN . DOWN
+
+    UP    shift, and go to state 88
+    DOWN  shift, and go to state 89
+
+
+state 47
+
+   49 Location: GOTO . NUM ',' NUM
+
+    NUM  shift, and go to state 90
+
+
+state 48
+
+   50 Location: WHERE . '?'
+
+    '?'  shift, and go to state 91
+
+
+state 49
+
+   85 Say_Statement: SAY . '(' Expression ')'
+
+    '('  shift, and go to state 92
+
+
+state 50
+
+   86 Ask_Statement: ASK . '(' STRING ',' Variable ')'
+
+    '('  shift, and go to state 93
+
+
+state 51
+
+   52 Variable: IDENT . Array_Acess
+
+    '['  shift, and go to state 94
+
+    $default  reduce using rule 53 (Array_Acess)
+
+    Array_Acess  go to state 95
+
+
+state 52
+
+    3 Body: DECLARATIONS Declarations @1 STATEMENTS Statements .
+   29 Statements: Statements . Statement
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+
+    $default  reduce using rule 3 (Body)
+
+    Statement              go to state 96
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 53
+
+   28 Statements: Statement .
+
+    $default  reduce using rule 28 (Statements)
+
+
+state 54
+
+   30 Statement: Turtle_Commands .
+
+    $default  reduce using rule 30 (Statement)
+
+
+state 55
+
+   34 Turtle_Commands: Step .
+
+    $default  reduce using rule 34 (Turtle_Commands)
+
+
+state 56
+
+   35 Turtle_Commands: Rotate .
+
+    $default  reduce using rule 35 (Turtle_Commands)
+
+
+state 57
+
+   36 Turtle_Commands: Mode .
+
+    $default  reduce using rule 36 (Turtle_Commands)
+
+
+state 58
+
+   37 Turtle_Commands: Dialogue .
+
+    $default  reduce using rule 37 (Turtle_Commands)
+
+
+state 59
+
+   38 Turtle_Commands: Location .
+
+    $default  reduce using rule 38 (Turtle_Commands)
+
+
+state 60
+
+   31 Statement: Assignment .
+
+    $default  reduce using rule 31 (Statement)
+
+
+state 61
+
+   51 Assignment: Variable . '=' Expression
+
+    '='  shift, and go to state 97
+
+
+state 62
+
+   47 Dialogue: Say_Statement .
+
+    $default  reduce using rule 47 (Dialogue)
+
+
+state 63
+
+   48 Dialogue: Ask_Statement .
+
+    $default  reduce using rule 48 (Dialogue)
+
+
+state 64
+
+   32 Statement: Conditional_Statement .
+
+    $default  reduce using rule 32 (Statement)
+
+
+state 65
+
+   33 Statement: Iterative_Statement .
+
+    $default  reduce using rule 33 (Statement)
+
+
+state 66
+
+   87 Conditional_Statement: IfThenElse_Stat .
+
+    $default  reduce using rule 87 (Conditional_Statement)
+
+
+state 67
+
+   88 Iterative_Statement: While_Stat .
+
+    $default  reduce using rule 88 (Iterative_Statement)
+
+
+state 68
+
+   15 Type: ARRAY SIZE . NUM
+
+    NUM  shift, and go to state 98
+
+
+state 69
+
+    7 Variable_Declaration: Vars SETA Type ';' .
+
+    $default  reduce using rule 7 (Variable_Declaration)
+
+
+state 70
+
+   18 Constant: '(' Sign NUM . ')'
+
+    ')'  shift, and go to state 99
+
+
+state 71
+
+   27 Elem: Sign NUM .
+
+    $default  reduce using rule 27 (Elem)
+
+
+state 72
+
+   26 Array_Initialization: Array_Initialization ',' . Elem
+
+    '+'  shift, and go to state 34
+    '-'  shift, and go to state 35
+
+    $default  reduce using rule 21 (Sign)
+
+    Sign  go to state 37
+    Elem  go to state 100
+
+
+state 73
+
+   24 Array_Definition: '[' Array_Initialization ']' .
+
+    $default  reduce using rule 24 (Array_Definition)
+
+
+state 74
+
+   83 SuccPred: SUCC .
+
+    $default  reduce using rule 83 (SuccPred)
+
+
+state 75
+
+   84 SuccPred: PRED .
+
+    $default  reduce using rule 84 (SuccPred)
+
+
+state 76
+
+   18 Constant: '(' . Sign NUM ')'
+   64 Factor: '(' . '!' Expression ')'
+   65       | '(' . '+' Expression ')'
+   66       | '(' . '-' Expression ')'
+   67       | '(' . Expression ')'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '+'    shift, and go to state 101
+    '-'    shift, and go to state 102
+    '('    shift, and go to state 76
+    '!'    shift, and go to state 103
+
+    $default  reduce using rule 21 (Sign)
+
+    Constant           go to state 77
+    Sign               go to state 36
+    Variable           go to state 78
+    Expression         go to state 104
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 77
+
+   61 Factor: Constant .
+
+    $default  reduce using rule 61 (Factor)
+
+
+state 78
+
+   62 Factor: Variable .
+
+    $default  reduce using rule 62 (Factor)
+
+
+state 79
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   89 IfThenElse_Stat: IF Expression . THEN '{' Statements '}' Else_Expression
+
+    THEN        shift, and go to state 105
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+
+    Rel_Op  go to state 113
+
+
+state 80
+
+   55 Expression: Single_Expression .
+   58 Single_Expression: Single_Expression . Add_Op Term
+
+    OU   shift, and go to state 114
+    '+'  shift, and go to state 115
+    '-'  shift, and go to state 116
+
+    $default  reduce using rule 55 (Expression)
+
+    Add_Op  go to state 117
+
+
+state 81
+
+   57 Single_Expression: Term .
+   60 Term: Term . Mul_Op Factor
+
+    E         shift, and go to state 118
+    MULTMULT  shift, and go to state 119
+    '*'       shift, and go to state 120
+    '/'       shift, and go to state 121
+
+    $default  reduce using rule 57 (Single_Expression)
+
+    Mul_Op  go to state 122
+
+
+state 82
+
+   59 Term: Factor .
+
+    $default  reduce using rule 59 (Term)
+
+
+state 83
+
+   63 Factor: SuccOrPred .
+
+    $default  reduce using rule 63 (Factor)
+
+
+state 84
+
+   82 SuccOrPred: SuccPred . IDENT
+
+    IDENT  shift, and go to state 123
+
+
+state 85
+
+   92 While_Stat: WHILE '(' . Expression ')' '{' Statements '}'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 124
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 86
+
+   40 Step: FORWARD @2 . Expression
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 125
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 87
+
+   42 Step: BACKWARD @3 . Expression
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 126
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 88
+
+   45 Mode: PEN UP .
+
+    $default  reduce using rule 45 (Mode)
+
+
+state 89
+
+   46 Mode: PEN DOWN .
+
+    $default  reduce using rule 46 (Mode)
+
+
+state 90
+
+   49 Location: GOTO NUM . ',' NUM
+
+    ','  shift, and go to state 127
+
+
+state 91
+
+   50 Location: WHERE '?' .
+
+    $default  reduce using rule 50 (Location)
+
+
+state 92
+
+   85 Say_Statement: SAY '(' . Expression ')'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 128
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 93
+
+   86 Ask_Statement: ASK '(' . STRING ',' Variable ')'
+
+    STRING  shift, and go to state 129
+
+
+state 94
+
+   54 Array_Acess: '[' . Single_Expression ']'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Single_Expression  go to state 130
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 95
+
+   52 Variable: IDENT Array_Acess .
+
+    $default  reduce using rule 52 (Variable)
+
+
+state 96
+
+   29 Statements: Statements Statement .
+
+    $default  reduce using rule 29 (Statements)
+
+
+state 97
+
+   51 Assignment: Variable '=' . Expression
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 131
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 98
+
+   15 Type: ARRAY SIZE NUM .
+
+    $default  reduce using rule 15 (Type)
+
+
+state 99
+
+   18 Constant: '(' Sign NUM ')' .
+
+    $default  reduce using rule 18 (Constant)
+
+
+state 100
+
+   26 Array_Initialization: Array_Initialization ',' Elem .
+
+    $default  reduce using rule 26 (Array_Initialization)
+
+
+state 101
+
+   22 Sign: '+' .
+   65 Factor: '(' '+' . Expression ')'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    $default  reduce using rule 22 (Sign)
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 132
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 102
+
+   23 Sign: '-' .
+   66 Factor: '(' '-' . Expression ')'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    $default  reduce using rule 23 (Sign)
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 133
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 103
+
+   64 Factor: '(' '!' . Expression ')'
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Expression         go to state 134
+    Single_Expression  go to state 80
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 104
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   67 Factor: '(' Expression . ')'
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+    ')'         shift, and go to state 135
+
+    Rel_Op  go to state 113
+
+
+state 105
+
+   89 IfThenElse_Stat: IF Expression THEN . '{' Statements '}' Else_Expression
+
+    '{'  shift, and go to state 136
+
+
+state 106
+
+   75 Rel_Op: IGUAL .
+
+    $default  reduce using rule 75 (Rel_Op)
+
+
+state 107
+
+   76 Rel_Op: DIF .
+
+    $default  reduce using rule 76 (Rel_Op)
+
+
+state 108
+
+   79 Rel_Op: MENORIGUAL .
+
+    $default  reduce using rule 79 (Rel_Op)
+
+
+state 109
+
+   80 Rel_Op: MAIORIGUAL .
+
+    $default  reduce using rule 80 (Rel_Op)
+
+
+state 110
+
+   81 Rel_Op: IN .
+
+    $default  reduce using rule 81 (Rel_Op)
+
+
+state 111
+
+   77 Rel_Op: '<' .
+
+    $default  reduce using rule 77 (Rel_Op)
+
+
+state 112
+
+   78 Rel_Op: '>' .
+
+    $default  reduce using rule 78 (Rel_Op)
+
+
+state 113
+
+   56 Expression: Expression Rel_Op . Single_Expression
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant           go to state 77
+    Variable           go to state 78
+    Single_Expression  go to state 137
+    Term               go to state 81
+    Factor             go to state 82
+    SuccOrPred         go to state 83
+    SuccPred           go to state 84
+
+
+state 114
+
+   70 Add_Op: OU .
+
+    $default  reduce using rule 70 (Add_Op)
+
+
+state 115
+
+   68 Add_Op: '+' .
+
+    $default  reduce using rule 68 (Add_Op)
+
+
+state 116
+
+   69 Add_Op: '-' .
+
+    $default  reduce using rule 69 (Add_Op)
+
+
+state 117
+
+   58 Single_Expression: Single_Expression Add_Op . Term
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant    go to state 77
+    Variable    go to state 78
+    Term        go to state 138
+    Factor      go to state 82
+    SuccOrPred  go to state 83
+    SuccPred    go to state 84
+
+
+state 118
+
+   73 Mul_Op: E .
+
+    $default  reduce using rule 73 (Mul_Op)
+
+
+state 119
+
+   74 Mul_Op: MULTMULT .
+
+    $default  reduce using rule 74 (Mul_Op)
+
+
+state 120
+
+   71 Mul_Op: '*' .
+
+    $default  reduce using rule 71 (Mul_Op)
+
+
+state 121
+
+   72 Mul_Op: '/' .
+
+    $default  reduce using rule 72 (Mul_Op)
+
+
+state 122
+
+   60 Term: Term Mul_Op . Factor
+
+    SUCC   shift, and go to state 74
+    PRED   shift, and go to state 75
+    TRUE   shift, and go to state 21
+    FALSE  shift, and go to state 22
+    IDENT  shift, and go to state 51
+    '('    shift, and go to state 76
+
+    Constant    go to state 77
+    Variable    go to state 78
+    Factor      go to state 139
+    SuccOrPred  go to state 83
+    SuccPred    go to state 84
+
+
+state 123
+
+   82 SuccOrPred: SuccPred IDENT .
+
+    $default  reduce using rule 82 (SuccOrPred)
+
+
+state 124
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   92 While_Stat: WHILE '(' Expression . ')' '{' Statements '}'
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+    ')'         shift, and go to state 140
+
+    Rel_Op  go to state 113
+
+
+state 125
+
+   40 Step: FORWARD @2 Expression .
+   56 Expression: Expression . Rel_Op Single_Expression
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+
+    $default  reduce using rule 40 (Step)
+
+    Rel_Op  go to state 113
+
+
+state 126
+
+   42 Step: BACKWARD @3 Expression .
+   56 Expression: Expression . Rel_Op Single_Expression
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+
+    $default  reduce using rule 42 (Step)
+
+    Rel_Op  go to state 113
+
+
+state 127
+
+   49 Location: GOTO NUM ',' . NUM
+
+    NUM  shift, and go to state 141
+
+
+state 128
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   85 Say_Statement: SAY '(' Expression . ')'
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+    ')'         shift, and go to state 142
+
+    Rel_Op  go to state 113
+
+
+state 129
+
+   86 Ask_Statement: ASK '(' STRING . ',' Variable ')'
+
+    ','  shift, and go to state 143
+
+
+state 130
+
+   54 Array_Acess: '[' Single_Expression . ']'
+   58 Single_Expression: Single_Expression . Add_Op Term
+
+    OU   shift, and go to state 114
+    '+'  shift, and go to state 115
+    '-'  shift, and go to state 116
+    ']'  shift, and go to state 144
+
+    Add_Op  go to state 117
+
+
+state 131
+
+   51 Assignment: Variable '=' Expression .
+   56 Expression: Expression . Rel_Op Single_Expression
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+
+    $default  reduce using rule 51 (Assignment)
+
+    Rel_Op  go to state 113
+
+
+state 132
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   65 Factor: '(' '+' Expression . ')'
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+    ')'         shift, and go to state 145
+
+    Rel_Op  go to state 113
+
+
+state 133
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   66 Factor: '(' '-' Expression . ')'
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+    ')'         shift, and go to state 146
+
+    Rel_Op  go to state 113
+
+
+state 134
+
+   56 Expression: Expression . Rel_Op Single_Expression
+   64 Factor: '(' '!' Expression . ')'
+
+    IGUAL       shift, and go to state 106
+    DIF         shift, and go to state 107
+    MENORIGUAL  shift, and go to state 108
+    MAIORIGUAL  shift, and go to state 109
+    IN          shift, and go to state 110
+    '<'         shift, and go to state 111
+    '>'         shift, and go to state 112
+    ')'         shift, and go to state 147
+
+    Rel_Op  go to state 113
+
+
+state 135
+
+   67 Factor: '(' Expression ')' .
+
+    $default  reduce using rule 67 (Factor)
+
+
+state 136
+
+   89 IfThenElse_Stat: IF Expression THEN '{' . Statements '}' Else_Expression
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+
+    Statements             go to state 148
+    Statement              go to state 53
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 137
+
+   56 Expression: Expression Rel_Op Single_Expression .
+   58 Single_Expression: Single_Expression . Add_Op Term
+
+    OU   shift, and go to state 114
+    '+'  shift, and go to state 115
+    '-'  shift, and go to state 116
+
+    $default  reduce using rule 56 (Expression)
+
+    Add_Op  go to state 117
+
+
+state 138
+
+   58 Single_Expression: Single_Expression Add_Op Term .
+   60 Term: Term . Mul_Op Factor
+
+    E         shift, and go to state 118
+    MULTMULT  shift, and go to state 119
+    '*'       shift, and go to state 120
+    '/'       shift, and go to state 121
+
+    $default  reduce using rule 58 (Single_Expression)
+
+    Mul_Op  go to state 122
+
+
+state 139
+
+   60 Term: Term Mul_Op Factor .
+
+    $default  reduce using rule 60 (Term)
+
+
+state 140
+
+   92 While_Stat: WHILE '(' Expression ')' . '{' Statements '}'
+
+    '{'  shift, and go to state 149
+
+
+state 141
+
+   49 Location: GOTO NUM ',' NUM .
+
+    $default  reduce using rule 49 (Location)
+
+
+state 142
+
+   85 Say_Statement: SAY '(' Expression ')' .
+
+    $default  reduce using rule 85 (Say_Statement)
+
+
+state 143
+
+   86 Ask_Statement: ASK '(' STRING ',' . Variable ')'
+
+    IDENT  shift, and go to state 51
+
+    Variable  go to state 150
+
+
+state 144
+
+   54 Array_Acess: '[' Single_Expression ']' .
+
+    $default  reduce using rule 54 (Array_Acess)
+
+
+state 145
+
+   65 Factor: '(' '+' Expression ')' .
+
+    $default  reduce using rule 65 (Factor)
+
+
+state 146
+
+   66 Factor: '(' '-' Expression ')' .
+
+    $default  reduce using rule 66 (Factor)
+
+
+state 147
+
+   64 Factor: '(' '!' Expression ')' .
+
+    $default  reduce using rule 64 (Factor)
+
+
+state 148
+
+   29 Statements: Statements . Statement
+   89 IfThenElse_Stat: IF Expression THEN '{' Statements . '}' Else_Expression
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+    '}'       shift, and go to state 151
+
+    Statement              go to state 96
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 149
+
+   92 While_Stat: WHILE '(' Expression ')' '{' . Statements '}'
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+
+    Statements             go to state 152
+    Statement              go to state 53
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 150
+
+   86 Ask_Statement: ASK '(' STRING ',' Variable . ')'
+
+    ')'  shift, and go to state 153
+
+
+state 151
+
+   89 IfThenElse_Stat: IF Expression THEN '{' Statements '}' . Else_Expression
+
+    ELSE  shift, and go to state 154
+
+    $default  reduce using rule 90 (Else_Expression)
+
+    Else_Expression  go to state 155
+
+
+state 152
+
+   29 Statements: Statements . Statement
+   92 While_Stat: WHILE '(' Expression ')' '{' Statements . '}'
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+    '}'       shift, and go to state 156
+
+    Statement              go to state 96
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 153
+
+   86 Ask_Statement: ASK '(' STRING ',' Variable ')' .
+
+    $default  reduce using rule 86 (Ask_Statement)
+
+
+state 154
+
+   91 Else_Expression: ELSE . '{' Statements '}'
+
+    '{'  shift, and go to state 157
+
+
+state 155
+
+   89 IfThenElse_Stat: IF Expression THEN '{' Statements '}' Else_Expression .
+
+    $default  reduce using rule 89 (IfThenElse_Stat)
+
+
+state 156
+
+   92 While_Stat: WHILE '(' Expression ')' '{' Statements '}' .
+
+    $default  reduce using rule 92 (While_Stat)
+
+
+state 157
+
+   91 Else_Expression: ELSE '{' . Statements '}'
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+
+    Statements             go to state 158
+    Statement              go to state 53
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 158
+
+   29 Statements: Statements . Statement
+   91 Else_Expression: ELSE '{' Statements . '}'
+
+    IF        shift, and go to state 40
+    WHILE     shift, and go to state 41
+    FORWARD   shift, and go to state 42
+    BACKWARD  shift, and go to state 43
+    RRIGHT    shift, and go to state 44
+    RLEFT     shift, and go to state 45
+    PEN       shift, and go to state 46
+    GOTO      shift, and go to state 47
+    WHERE     shift, and go to state 48
+    SAY       shift, and go to state 49
+    ASK       shift, and go to state 50
+    IDENT     shift, and go to state 51
+    '}'       shift, and go to state 159
+
+    Statement              go to state 96
+    Turtle_Commands        go to state 54
+    Step                   go to state 55
+    Rotate                 go to state 56
+    Mode                   go to state 57
+    Dialogue               go to state 58
+    Location               go to state 59
+    Assignment             go to state 60
+    Variable               go to state 61
+    Say_Statement          go to state 62
+    Ask_Statement          go to state 63
+    Conditional_Statement  go to state 64
+    Iterative_Statement    go to state 65
+    IfThenElse_Stat        go to state 66
+    While_Stat             go to state 67
+
+
+state 159
+
+   91 Else_Expression: ELSE '{' Statements '}' .
+
+    $default  reduce using rule 91 (Else_Expression)

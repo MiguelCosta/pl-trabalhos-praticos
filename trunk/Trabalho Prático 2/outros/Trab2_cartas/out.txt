@@ -1,0 +1,25 @@
+pushi 0
+pushi 100
+pushi 1
+pushi 1
+pushi 200
+pushi 450
+start
+pushi 800
+pushi 600
+opendrawingarea
+pushg 4
+pushg 5
+pushg 5
+pushg 1
+sub
+storeg 5
+pushg 4
+pushg 5
+drawline
+refresh
+pushi 100
+storeg 0
+pushg 4
+pushg 5
+pushg 4
